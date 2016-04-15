@@ -1,0 +1,15 @@
+/*OVERRIDES FOR ANDROID SPACING ISSUES WITH TTROUNDS FONT*/
+.android {
+	a.mastCta{line-height:60px;}
+	.mobileShow.mastheadWrap.active .nav>li.ctaExpand a{line-height:80px;height:70px;}
+	.mobileShow.mastheadWrap.active .nav>li.ctaExpand a.navbar-brand{height:auto;line-height: 1;}
+	/*35px height btn*/
+	.btn, #login-div-content input.uc-button, #login-div-content button, #login-div-content .ft button,.btn-success, .navbar-form #login {line-height:45px;height:35px;}
+	.btn.search{height:50px;line-height: 1;}
+	/*50px height btn*/
+	#logBtn, #logBtn:link, #login, input#donor_matching_employersearchBtn, div.responsive a.step-button, div.responsive button.step-button, div.responsive a#previous_step.step-button, div.responsive button#previous_step.step-button, div.responsive a#cancel_button.step-button, div.responsive button#cancel_button.step-button, div.responsive button#pstep_cancel.step-button, .Button, div#team_find_search_results_container div.list-component-cell-column-join-link a, div.responsive a#part_ctr_container, div.responsive a#part_ctr_container_step, .NextButton, .FinishButton, .CancelButton, #login-div-content input.uc-button, #login-div-content button, #login-div-content .ft button, .SmallButton, #personal_page_team_page_link, .utype div.responsive .step-button.next-step{line-height:60px;height:50px;}
+	/*60px height btn*/
+	div.responsive #part_type_additional_gift_container .donation-level-row-label{height:60px; line-height:70px;}
+}
+
+

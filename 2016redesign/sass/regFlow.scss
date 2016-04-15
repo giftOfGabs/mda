@@ -1,0 +1,232 @@
+
+@import 'mixins';
+/*--------------------------------------
+TEAMRAISER REG FLOW
+----------------------------------------*/
+.appArea, .trPage, div.responsive{width:100%;margin:0 auto;}
+div.appArea{padding-bottom: $smallMargin;}
+div.tr-page-container {width:100%;margin:0;border:0 none;color:inherit;}
+div.tr-page-container div.header-container, div.tr-page-container div.side-bar, div.tr-page-container div.section-sub-header.empty, div.campaign-banner-container, .trPage .sideBar, .trPage .header {display:none;}
+.trPage .main, div.tr-page-container div.main-content{margin:0;width:100%;float:none;}
+div.registration-page-container div.section-container{margin: 0; color:inherit;border:0 none;}
+div.registration-page-container div.section-footer{padding:0;margin:50px 0 0;background:transparent;clear:both;}
+#required_indicator_legend_container{margin:0 0 $smallMargin;}
+div.required-indicator-legend{padding:0;}
+div.responsive div.form-content{margin:0 0 $smallMargin 0;}
+div#registration_options_page div#privacy_opts_container, div#registration_options_page div#tribute_component_section_one, div#registration_options_page div#tribute_component_section_two, div#emergency_contact_container {width:45%;padding: 0 5% 0 0}
+div.registration-page-container div.label-value-block-container{border-color:$primaryColor}
+.section-footer #part_ctr_container_step{display:none;}
+.header-container .section-header-text{display:none;}
+/*-----------------------------------
+DONOR SEARCH
+---------------------------------------*/
+#find_participant div.participant-find-search-container{width:auto;}
+div#find_participant div.list-component-body div.list-component-cell.list-component-cell-column-team-name, div#find_participant div.list-component-body div.list-component-cell.list-component-cell-column-company-name, div#find_participant div.list-component-body div.list-component-cell.list-component-cell-column-captain-name, div#find_participant div.list-component-body div.list-component-cell.list-component-cell-column-tr-name, div#find_participant div.list-component-body div.list-component-cell.list-component-cell-column-date {max-width:100%;}
+/*------------------------
+REGISTER PAGE
+----------------------------*/
+.ctaBtns {text-align: center}
+div.responsive .ctaBtns a.customBtn {width:auto;text-transform: none;margin: 0 4% 0 0;width:30%;display: inline-block}
+div.responsive .ctaBtns a.customBtn:last-child{margin:0;}
+.partInfo{background:$ltGrey;text-align: center;padding: $smallMargin;@include border-radius(5px);}
+@media(max-width:950px){
+    div.responsive .ctaBtns a.customBtn{display: block;margin:0 auto $smallMargin;max-width: 400px;width:100%;}
+    div.responsive .ctaBtns a.customBtn:last-child{margin:0 auto;}
+}
+/*HIDING HEADER AND SUBSECTION ON REG FORMS*/
+div.registration-page-container div.section-header, div.registration-page-container div.section-sub-header{display:none;}
+div.registration-page-container div.section-body{padding:0;}
+
+/*------------------------------
+RETURNING USER LOGIN
+--------------------------------*/
+div#user_type_new_participant_registration_container, div#user_type_login_container, div#user_type_oauth_login_container{width:25%;margin:0 12.5% 0 0;padding:0;border:0 none;background: transparent;}
+div#user_type_oauth_login_container{margin:0;}
+div#user_type_new_participant_registration_container #next_step{margin:0;width:100%;}
+#fr_new_user_container, #fr_returning_user_container, #fr_responsive_social_login_container{@include dashedBorder();margin:0 0 $halfMargin;padding: 0 0 10px;}
+div#user_type_login_container input{max-width:100%;}
+/*-----------------------------
+REG FLOW Progress BAR
+------------------------------*/
+div.progress-bar-step-container{width:16%;margin:0;padding:0;text-align:center;padding:0 0 $halfMargin;}
+div.progress-bar-step-text-container {display:block;margin:0;color:$greyColor;font-size:16px;padding:0;margin:10px 0 0;max-width:100%;}
+div.responsive div.progress-bar-step-text-container a, div.responsive  div.progress-bar-step-text-container a:link{font-size:16px;}
+div.progress-bar-step-current div.progress-bar-step-text-container {color:$darkGrey;}
+div.progress-bar-step-number-container{width:60px;height:60px;@include border-radius(50%);line-height: 60px;font-size:28px;background:$greyColor;color:#fff;}
+div.progress-bar-step-current div.progress-bar-step-number-container{background:$primaryColor;color:#fff;}
+div.registration-page-container div.progress-bar-step-number-container a{color:inherit;font-size: inherit;text-decoration: none}
+
+/*NEW TEAM*/
+#team_find_new_team_attributes, #team_find_new_team_company {width:45%;}
+#team_find_new_team_attributes{margin:0 10% 0 0;}
+#fr_co_list_sel{max-width:100%;width:94.8%;}
+#fr_co_list_2, #fr_co_list_1{float:left;margin:$smallMargin 0 0;}
+div.responsive input#fr_co_list_new{float:none;width:95%;}
+#team_find_page div.input-container{overflow: hidden;}
+#team_find_page div.input-container#team_find_new_division_selection_container{margin-top:40px;}
+div#team_find_new_team_attributes input[type="text"], div#team_find_new_team_attributes input[type="password"], div#team_find_new_team_company #fr_division_name{margin:0;}
+#team_find_registration_type_container{font-size:18px; color:$primaryColor;text-transform:uppercase;margin: $halfMargin 0;}
+.team-find-alternate-options-seperator{display: none;}
+#team_find_registration_type_container div{margin: 0 0 0 10%;}
+#team_find_registration_type_container .fa {margin:0 0 0 10px;color:$linkColor;}
+#team_find_page div.combo-select-input-container{overflow:hidden;}
+#friend_potion_next{margin:30px 0 0;}
+/*FIND TEAM*/
+#team_find_page #team_find_section_body #team_find_existing div.input-container{margin:0 2.5% 0 0;width:40%;display:block;float:left;}
+#fr_find_search{margin:25px 0 0;}
+#team_find_page div#team_find_search_results_container{background-color:transparent;border:0 none;padding:0;margin:$halfMargin 0;}
+#team_find_page div.list-component-sort-select-container{width:280px;}
+#team_find_page div.list-component-row{background:none $ltGrey;}
+#team_find_page span#team_find_search_results_header_text{margin:0;}
+
+/*-----------------------------
+PARTICIPATION OPTIONS
+---------------------------------*/
+.ptype > .container{max-width:100%;padding:0;}
+.ptype h2, #part_type_header_container, #part_type_selection_container, .ptype .prizes, #part_type_section_footer, #part_type_section_footer, .ptype hr.border, .ptype .sponsors, #part_type_additional_gift_container, .ptype .required-indicator-legend-container, #part_type_individual_company_selection_container,div#part_type_addon_container {max-width:1000px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0;}
+div#part_type_fundraising_goal_container input{width:200px;}
+div.part-type-container.selected{background:$ltGrey;border:0 none;}
+#participation_options_page .prizes .right {width:75%;width:calc(100% - 265px);}
+#participation_options_page .prizes .right div{width:33%;text-align:center;padding: 0 10px;}
+#participation_options_page .prizes .right div.last{margin:-8px 0 0}
+div#part_type_fundraising_goal_container{margin:$halfMargin 0;background:$primaryColor;padding:$halfMargin $smallMargin $halfMargin - 20px;}
+#participation_options_page .input-container#part_type_fundraising_goal_input_container{text-align:center;margin:0;}
+#participation_options_page .input-container#part_type_fundraising_goal_input_container div {width:auto;display: inline;line-height: 50px;color:#fff;}
+div#part_type_fundraising_goal_container #suggested_goal_container{color:#fff;text-align: center;display: block;margin:10px 0 0;font-size:18px;}
+div#part_type_fundraising_goal_container label{display: inline;margin:0 10px 0 0;color:#fff;}
+.goalText{color:#fff;text-align: center;font-weight:bold;}
+div#part_type_fundraising_goal_container input{margin:auto;}
+#part_type_individual_company_input_container{max-width:400px;}
+
+@media(max-width:1050px){
+    .ptype h2, #part_type_header_container, #part_type_selection_container, .ptype .prizes, #part_type_section_footer, #part_type_section_footer, .ptype hr.border, .ptype .sponsors, #part_type_additional_gift_container, .ptype .required-indicator-legend-container, #part_type_individual_company_selection_container, div#part_type_addon_container{padding-left:4%;padding-right:4%;}
+}
+/*---------------------------------
+REG ADDITIONAL DONATION
+-------------------------------------*/
+div.responsive #part_type_additional_gift_container div.donation-level-row-container{float:left;background:$primaryColor;width:150px;height:60px;@include border-radius(0);margin:0 2% $smallMargin 0;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container:hover{cursor: pointer}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.otherAmt{background:transparent;position: relative;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.otherAmt .input-container{margin:0;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.otherAmt label{display: none}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.otherAmt .donation-level-label-input-container {position: absolute;top:0;display:block;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.otherAmt .donation-level-label-input-container input{height:60px;padding: 0 0 0 10px;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.active, div.responsive #part_type_additional_gift_container div.donation-level-row-container.active:last-child{background:$cyanColor;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container:last-child{margin:0;background:$ltGrey;color:$greyColor;}
+#part_type_additional_gift_container div.donation-level-row-container .donation-level-description-text{display:none;}
+div.responsive #part_type_additional_gift_container .donation-level-row-label{font-weight:bold;font-size:$mediumFont;line-height: 60px;display: block;text-align:center;color:#fff;font-family:$customFontBold;}
+div.responsive #part_type_additional_gift_container label.donation-level-row-label-no-gift{font-size:18px;line-height: 60px;display: block;text-align:center;color:$greyColor;font-weight:bold;}
+div.responsive #part_type_additional_gift_container div.donation-level-row-container.active label.donation-level-row-label-no-gift {color:#fff;}
+#part_type_additional_gift_container input[type="radio"]{width:25px;height:25px;vertical-align: middle;display:none;}
+div.donation-level-row-decoration-container{color:#fff;display: block;}
+#part_type_additional_gift_section_header{font-size:$mediumFont;text-align: center;font-weight:bold}
+div#part_type_additional_gift_container, div#part_type_individual_company_selection_container{@include dashedBorderTop();padding-top: $halfMargin;margin-top:$halfMargin;overflow:hidden;clear:both;}
+#participation_options_page .input-container{overflow:hidden;margin:$halfMargin 0 0;}
+#reg_payment_page #billing_info_name div.form-row, #reg_payment_page #billing_addr_city_row, #reg_payment_page #billing_addr_state_row, #reg_payment_page #billing_addr_county_row, #reg_payment_page #billing_addr_zip_row{float:left;margin: 10px 2% 10px 0;}
+#reg_payment_page div.form-row div.form-content>select, #reg_payment_page div.form-row div.form-content>input{margin:0;}
+@media(max-width:1023px){
+    .formMessage{width:calc(100% - 320px);}
+    #responsive_payment_typecc_number_row, #responsive_payment_typecc_exp_date_row, #responsive_payment_typecc_cvv_row{clear:both;}
+}
+@media(max-width:767px){
+    #employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street{width:auto;}
+    .formMessage, .formPhoto{clear:both;float:none;margin: 0 auto;width:100%;}
+    .formMessage{margin: 0 0;}
+    div#fr_thanks_page a#part_ctr_container{margin:0 auto $smallMargin;}
+}
+
+/*REG PERSONAL INFO*/
+#registration_options_page div.required-indicator-legend{text-align:left;}
+div#reg_instr_container{display:none;}
+#reg_options_cons_info_extension{display:none;}
+div.registration-page-container#registration_options_page div.sub-section-container{background-color: transparent;overflow:hidden;margin: 0 0 $halfMargin;}
+#registration_options_page .sub-section-header{display: none;}
+#registration_options_page #participant_info_container.sub-section-container .sub-section-header{display: block;padding:0;border:0 none;background-color:#fff;font-size:18px;font-weight:bold;margin:0 0 15px;}
+#registration_options_page .AutoOptInWarningMessage{display: none;}
+#reg_options_cons_info_extension_body{overflow:hidden;clear:both;}
+div#gift_notice_optin, div#email_optin{width:100%;padding:0;clear:both;margin:0 0 25px;}
+div#email_optin{margin:0;}
+div#gift_notice_optin label {width:100%;max-width:95%;}
+div.registration-page-container div.sub-section-body{padding:10px 0 0;}
+div#cons_info_component_container div#personal_info_section_two{width:130px;}
+.registration {
+	div#cons_info_component_container div#personal_info_section_one, div#cons_info_component_container div#contact_info_section_two, div#cons_info_component_container div#contact_info_section_one {width:87%; width:calc(100% - 130px);padding:0;}
+	#personal_info_section_one .cons-info-question-container, #contact_info_section_two .cons-info-question-container, .cons-info-question-container.street{float:left;width:50%;padding:0 $smallMargin 0 0;}
+	.cons-info-question-container.city, .cons-info-question-container.country{clear:left;}
+	.cons-info-question-container.city{padding:0 $smallMargin 0 0;}
+	.cons-info-question-container.zip{padding: 0 $smallMargin;}
+	.cons-info-question-container.city, .cons-info-question-container.zip{width:39%;float: left}
+	.cons-info-question-container.state{width:22%;float: left}
+	.cons-info-question-container.country, #additional_questions_container .selectWrap{max-width:535px;min-width:260px;width:auto;}
+	#additional_questions_container .survey-question-number{display: none;}
+	div#registration_options_page div#user_name_pword_container{width:100%;}
+	div#password_component_container div.field-required {width:30%;margin: 0 2% 0 0;float:left;}
+	.cons-info-question-container.country{display: none;}/*HIDING COUNTRY SINCE ALL ARE US AND ITS FILLED OUT BY SYSTEM*/
+}
+
+/*WAIVER*/
+div#fr_waiver_page div.waiver-text{overflow-y:scroll;background-color: $ltGrey;border:0 none;max-height:215px;}
+#FriendraiserUserWaiver{margin-top:$halfMargin}
+.printable-link-icon{display: none;}
+
+/*REG SUMMARY*/
+div.reg-summary-thanks-common-container div.reg-summary-name-info span.contact-info-first, div.reg-summary-thanks-common-container div.reg-summary-name-info span.contact-info-name{color:inherit;font-family:inherit;font-weight:normal;font-size:$fontBody;display: inline;}
+div.reg-summary-thanks-common-container div.reg-summary-address-info > div, div.reg-summary-thanks-common-container div.part-type-name{font-size:$fontBody;}
+#reg_payment_page div.form-row#responsive_payment_typecc_exp_date_row div.form-content{width: 250px}
+.cardExpGroup .selectWrap {float:left;width:45%;margin:0 5% 0 0;}
+div.reg-summary-thanks-common-container div.reg-summary-event-info{border: 0 none;width:auto;max-width:300px;display: block;}
+div.reg-summary-thanks-common-container div.reg-summary-name-info{background-color: transparent;border: 0 none;}
+div.reg-summary-thanks-common-container div.reg-summary-total{text-align: left;background:transparent;}
+div.reg-summary-thanks-common-container div.reg-summary-reg-info{border:5px solid $primaryColor;@include border-radius(5px);padding:10px;}
+#part_center_link_title{display: none;}
+div.reg-summary-thanks-common-container div.action-button-container .secondary-wrapper{clear:both;width:100%;}
+div.reg-summary-thanks-common-container div.reg-summary-address-info{border-color:$secondaryColor;width:auto;}
+
+@media(max-width:950px){
+	.registration{
+	    div#user_type_new_participant_registration_container{width:40%;margin:0 20% 0 0;}
+	    div#user_type_login_container{width:40%;margin:0;}
+	    div#user_type_oauth_login_container{width:100%; clear:both;margin:25px auto 0;}
+	    div.progress-bar-step-text-container{display: none;}
+	    #team_find_page #team_find_section_body #team_find_existing div.input-container{width:45%;}
+	    div#cons_info_component_container div#personal_info_section_two{clear:both;}
+	    div#cons_info_component_container div#personal_info_section_one, div#cons_info_component_container div#contact_info_section_two, div#cons_info_component_container div#contact_info_section_one{width:100%;}
+	    .cons-info-question-container.zip{clear:left;padding: 0 $smallMargin 0 0;}
+	    .cons-info-question-container.country{float:left;;clear:none;}
+	    .cons-info-question-container.state{width:auto;}
+	    .cons-info-question-container.street:nth-child(2){padding:0;}
+    }
+}   
+@media(max-width:767px){
+	.registration{
+	    #team_find_new_team_attributes, #team_find_new_team_company{width:100%;margin:0;}
+	    div.responsive input#fr_co_list_new{float:none;}
+	    #fr_co_list_2, #fr_co_list_1{float:none;margin: 0;}
+	    #fr_co_list_sel{width:100%;max-width:100%;}
+	    div.responsive input#fr_co_list_new{width:100%;}
+	    div.responsive input[type="text"], div.responsive input[type="number"], div.responsive input[type="password"], div.responsive textarea, div.responsive .selectWrap{max-width:300px;display: block}
+	    #team_find_page #team_find_section_body #team_find_existing div.input-container{width:100%;margin: 0 0 $halfMargin;}
+	    #fr_find_search{margin:0;}
+	    #team_find_registration_type_container div{margin: 0 0 25px; display:block;}
+	    #team_find_registration_type_container{text-align: left;}
+	    #participation_options_page .prizes > .left, #participation_options_page .prizes .right{width:100%;margin:0 0 25px;float:none;}
+	    #participation_options_page .prizes > .left img{display:block;margin:auto;}
+	    div.reg-summary-thanks-common-container div.action-button-container{width:100%;}
+	    div.reg-summary-thanks-common-container div.action-button-container .secondary-wrapper{float:none;}
+	    div#password_component_container div.field-required{width:100%;margin: 0 0 $smallMargin;float:none;}
+    }
+}
+@media(max-width:567px){
+	.registration{
+	    div#user_type_new_participant_registration_container, div#user_type_login_container{width:100%;margin:0 0 $halfMargin;}
+	    div#user_type_new_participant_registration_container #next_step{display: block;margin:auto;max-width:300px;}
+	    div.progress-bar-step-container{width:15%;padding:0 0 $smallMargin;}
+	    div.progress-bar-step-number-container{width:40px;height:40px;line-height:40px;}
+	    div.responsive input#fr_co_list_new{width:100%;}
+	    #participation_options_page .prizes .right div{width:100%;float:none;margin: 0 0 25px !important;}
+	    div.reg-summary-thanks-common-container div.reg-summary-address-info, div.reg-summary-thanks-common-container div.reg-summary-event-info{display: block;width:100%;border:0 none;}
+	    #personal_info_section_one .cons-info-question-container, #contact_info_section_two .cons-info-question-container, .cons-info-question-container.street,.cons-info-question-container.city, .cons-info-question-container.zip {width:100%;float:none;padding:0;}
+    }
+}
+/*REG TY*/
+div#fr_thanks_page div#transaction_summary_container{border-color:$primaryColor;margin:0 0 $halfMargin;}

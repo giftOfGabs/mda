@@ -1,0 +1,118 @@
+@import 'mixins';
+.android{
+		/*CUSTOM FONT SPACING ISSUES IN ANDROID*/
+		.donation div.donation-level-container{height:45px;}
+}
+/*--------------------------------
+ROUND CHECKBOX INPUTS
+----------------------------------*/
+div.responsive .roundCheck {position: relative;width: 28px;height: 28px;background: $greyColor;margin: auto;@include border-radius(50px);float:left;padding:0;
+	label {cursor: pointer;position: absolute;width: 20px;height: 20px;@include border-radius(50px);left: 4px;top: 4px;text-indent:-99999px;background:$ltGrey;}
+	label:after {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity: 0;
+		content: '';position: absolute;width: 20px;height: 20px;background: $primaryColor;	@include border-radius(50px);top: 0px;left: 0px;}
+	input[type=checkbox]:checked + label:after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;}
+	input[type=checkbox]{visibility:hidden;position: absolute;left:0;right: 0;width:28px;height:28px;}
+}
+
+#ProcessForm div.responsive .active {
+	.roundCheck{background:$secondaryColor;
+		label{background:$primaryColor;}
+	}
+	span{color: $primaryColor;}
+}
+.siteDefault{
+	ul.ui-menu{position: static;height:190px;overflow-y:scroll;}
+	.navbar-brand{position:static;}
+	.donation{
+		p{margin: 0 0 $smallMargin;}
+		.hero{background:url('https://secure2.convio.net/mda/images/Donations/donationFormHero.png') no-repeat 0 0 scroll;@include bgSize(cover);padding:5% 0;text-align:center;
+			h1{color:$secondaryColor;font-family:$customFontBold;}
+			p{font-size:$mediumLarge;color:#fff;font-family:$customFontBold;}
+		}
+		.form-row{margin:auto;}
+		#level_standard_row{margin:0 auto $halfMargin;}
+		.don-standard-levels.form-row{margin:0 auto;width:100%;max-width:100%;background-color: $ltGrey;padding:$bigMargin 0;}
+		.form-progress-bar{display: none;}
+		#ProcessForm {padding:0 0 $bigMargin;margin:auto;
+			.left, .right{width:45%;}
+		}
+		h2.section-header-container{border:0 none;margin:auto;}
+		div.donation-level-container, div.donation-level-container.enterAmt{width:180px;}
+		div.donation-level-amount-container{font-family:$customFont;} 
+		.generic-repeat-label-checkbox-container label, #tribute_show_honor_fields_row label{font-family:$customFontBold;}
+		#tribute_show_honor_fields_row {
+			.form-content{margin: 0 0 10px;}
+			.form-content.roundCheck{margin:0;}
+			p{font-size:14px;}
+		}
+		label+div.donation-level-user-entered{margin:10px 0;}
+		#employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street{width:100%;}
+		#billing_first_name_row, #billing_last_name_row, #donor_email_address_row, #donor_phone_row, #billing_addr_street1_row, #billing_addr_street2_row, #billing_addr_city_row, #billing_addr_state_row, #billing_addr_zip_row, #billing_addr_country_row {float:none;display: block;margin:0;}
+		
+		.billingSection{			
+			div.form-row div.form-content{width:100%;}
+			div.form-row div.form-content.roundCheck{width:28px;margin:0;}
+			
+		}
+		.honorCaption{clear:both;margin: 0 0 0 50px;}
+		.honorSection{padding:$halfMargin 0;border-bottom: 1px solid $secondaryColor;
+			div.form-row div.form-content{width:100%;}
+		}
+		.matchingGiftWrap{border-top:1px solid $secondaryColor;border-bottom:1px solid $secondaryColor;margin:$halfMargin auto 0;padding:$halfMargin 0;
+			div.form-content{margin:0;width:100%;}
+
+		}
+		.donateSubmit{margin:$halfMargin auto;}
+		.button-container{display: none;}
+
+		.donation-level-container-generic-repeat span, #tribute_show_honor_fields_row span, #donor_email_opt_in_Row span, #donor_remember_me_row span{font-family: $customFontBold;display: block;line-height:1;float:left;margin:4px 0 0 $smallMargin;}
+	}
+	/*OVERRIDES FOR LIVE UNLIMITED FORM*/
+	.liveUnlimited{
+		.hero{background-image: url('https://secure2.convio.net/mda/images/liveUnlimitedHero.jpg');}
+		.navbar-brand{width:100%;max-width:300px;}
+	}
+}
+.siteDefault.noHero{
+	.donation .don-standard-levels.form-row{background-color:transparent;}
+	.donation .content{margin:auto;}
+}
+@media(max-width:1050px){
+	.siteDefault{
+		.donation{
+			.section-header-container{padding:35px 2%;}
+			.donation-level-container-generic-repeat span, #tribute_show_honor_fields_row span, #donor_email_opt_in_Row span, #donor_remember_me_row span{float:none;clear:both;margin:10px 0 0;}
+		}
+	}
+	.siteDefault .donation #billing_first_name_row, .siteDefault .donation #billing_last_name_row, .siteDefault .donation #donor_email_address_row, .siteDefault .donation #donor_phone_row, .siteDefault .donation #billing_addr_street1_row, .siteDefault .donation #billing_addr_street2_row, .siteDefault .donation #billing_addr_city_row, .siteDefault .donation #billing_addr_state_row, .siteDefault .donation #billing_addr_zip_row, .siteDefault .donation #billing_addr_country_row,.custom-field-container, #donor_employer_row, #billing_middle_name_row, .honorSection .form-row.container {padding:0;}
+	div.responsive .roundCheck{float:none;}
+	.siteDefault .donation .honorCaption{margin:5px 0 0;}
+}
+@media(max-width:767px){
+	.siteDefault{
+		.donation{
+			.navbar-brand{float:none;
+				img{margin:25px auto;}
+			}
+			.hero {background: none $darkGrey;
+				h1{margin:0;}
+				p{display: none;}
+			}
+			#ProcessForm {
+				.section-header-container{padding:35px 4%;}
+				.left, .right{width:100%;}
+			}
+			.don-standard-levels.form-row{padding:$halfMargin;}
+			.donation-levels{margin:auto;max-width:480px;}
+			div.donation-level-container.level2{clear:left;}
+			div.donation-level-container{width:45%;margin-right:5%;}
+			div.donation-level-container:nth-child(2),div.donation-level-container:nth-child(4){margin-right:0;}
+			div.donation-level-container.enterAmt{width:95%;margin-right:0;}
+			#tribute_show_honor_fields_row{padding:0;margin:$smallMargin 0 0;}
+			#donor_email_opt_in_Row, #donor_remember_me_row{padding:0;}
+			 #donor_remember_me_row{margin:$halfMargin 0 0;}
+
+		}
+	}
+}

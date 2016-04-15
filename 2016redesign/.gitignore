@@ -1,0 +1,5 @@
+node_modules/
+images/*
+dist/images/*
+.sass-cache/
+.sass-cache/*

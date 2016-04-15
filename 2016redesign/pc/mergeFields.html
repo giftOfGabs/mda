@@ -1,0 +1,22 @@
+<!-- Merge fields
+evID = [[S80:evID]]
+eventName='[[E42:[[S80:evID]]:title]]';
+ -->
+
+<div class="mergeFields" style="display:none;">
+    <div id="mergeFirst">[[S1:first_name]]</div> 
+    <div id="mergeLast">[[S1:last_name]]</div>
+    <div id="mergeEventName">[[E42:[[S80:evID]]:title]]</div>
+    <div id="mergeStart">[[E47:[[S80:evID]]:fr_info:1:event_date]]</div>
+    <div id="mergeEnd">[[E47:[[S80:evID]]:fr_info:1:event_date]]</div>
+    <div id="mergeLocation">[[E47:[[S80:evID]]:fr_info:1:event_location]]</div>
+    <div id="mergeConsAddress">[[S1:home_street1]][[?xx::x[[S1:home_street2]]x::::<br />[[S1:home_street2]]]]<br />[[S1:home_city]], [[S1:home_stateprov]] [[S1:home_zip]]</div>
+    <div id="mergeTeamName">[[E48:[[S80:evID]]:team-name]]</div>
+  
+    <div id="mergeTeamPageLinkText">http://[[S29:DOMAIN]]/site/TR?fr_id=[[S80:evID]]&pg=team&team_id=[[E48:[[S80:evID]]:team-id]]</div>   
+    <div id="mergePartPageLinkText">http://[[S29:DOMAIN]]/site/TR?fr_id=[[S80:evID]]&pg=personal&px=[[S1:cons_id]]</div>
+    <div id="mergeOfficeMailAdd">[[E42:[[S80:evID]]:local-office-mailing-address]]</div>
+    <div id="mergeParticipantCenterLink">http://[[S29:DOMAIN]]/site/TRC?fr_id=[[S80:evID]]</div>
+    <div id="mergeParticipantCenterEmailLink">http://[[S29:DOMAIN]]/site/TRC?fr_id=[[S80:evID]]&pg=mtype</div>
+    <div id="boundlessFundraisingLink">http://[[S29:DOMAIN]]/site/RedirectHandler?key=boundlessfundraise&s_trID=[[S80:evID]]</div>
+</div>

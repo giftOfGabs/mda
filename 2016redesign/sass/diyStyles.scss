@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.diy{
+	.tagline img{max-width:45px;}
+	.featuredParticipant{background:url("../../../images/content/teamRaiser/genFeatureBkrd.png") no-repeat scroll 100% 0 transparent;@include cover();}
+	.eventFeature .featureHero{background-image:url('../../../images/content/teamRaiser/genAboutHero.jpg');}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/genHero.jpg');background-position-y:-50px;}
+}
+
+.diy.splash{ 
+	h1{line-height: 1;margin:0 0 $smallMargin;}
+	p{line-height: 1.5}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/genHeroSplash.jpg');background-position-y:0px;}
+}
+
+@media(max-width:767px){
+	.diy {
+		.featuredParticpant{background:none scroll 0 0 #fff;}
+	}
+}
+@media(max-width:567px){
+	.diy{
+		.tagline span{display: block;float:left;width:calc(100% - 55px);}
+	}
+}

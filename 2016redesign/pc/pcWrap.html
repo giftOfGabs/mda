@@ -1,0 +1,70 @@
+<div class="mastheadWrap mobileShow">
+    <div class="loggedIn">
+        <p>Hi [[S1:first_name]]!</p> 
+        <p><a href="SPageServer?pagename=musclewalk_mywalk_dev#mywalk">My Walk Events</a> <span>|</span> <a href="ConsProfileUser?dispMode=edit&pw_id=2523&s_AffiliateSecCatId=1">My Profile</a> <span>|</span> <a href="UserLogin?logout=&NEXTURL=[[T1:https://secure2.convio.net/mda/site/SPageNavigator/musclewalk_splash.html]]">Log out</a></p>
+    </div>
+    <a class="navbar-brand" href="https://secure2.convio.net/mda/site/SPageNavigator/musclewalk_splash.html"><img class="original" src="https://secure2.convio.net/mda/images/content/teamRaiser/2016mw-logo.png" alt="MDA Muscle Walk" /></a>
+</div>
+<div class="mastheadWrap desk">        
+    <div class="container">        
+            <a class="navbar-brand" href="https://secure2.convio.net/mda/site/SPageNavigator/musclewalk_splash.html"><img class="original" src="https://secure2.convio.net/mda/images/content/teamRaiser/2016mw-logo.png" alt="MDA Muscle Walk" /></a>
+        <div class="mastheadActions">
+            <div class="loggedIn right">
+                <p>Hi [[S1:first_name]]! 
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span> 
+                <a href="SPageServer?pagename=musclewalk_mywalk_dev#mywalk">My Walk Events</a>
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <a href="ConsProfileUser?dispMode=edit&pw_id=2523&s_AffiliateSecCatId=1">My Profile</a> 
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <span class="utilityHelp"></span>
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <a href="UserLogin?logout=&NEXTURL=[[T1:[[S8]]]]">Log out</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>  
+<li id="fundResources"><a target="_blank" href="TR?fr_id=[[S80:trID]]&pg=informational&sid=3392">Fundraising Resources</a></li>
+<div class="tagline welcome">
+    <div class="container">
+        <h1>Welcome, [[S1:first_name]]!</h1>
+    </div>
+</div>
+<div class="ctaBtn">
+    <a class="customBtn sendEmail" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" href="#email-compose">Send Email 
+        <div class="borderWrap">
+            <div class="borderOutline">
+                <div class="borderLeft"></div>
+            </div>
+        </div>
+    </a>
+    [[?[[E48:[[S80:trID]]:if-is-self-donor]]::TRUE::
+        
+    ::
+        <a class="customBtn selfDonate" href="http://[[S29:DOMAIN]]/site/Donation2?idb=[[S76:idb]]&df_id=[[E42:[[S80:trID]]:form-id]]&FR_ID=[[S80:trID]]&PROXY_ID=[[S1:cons_id]]&PROXY_TYPE=20& [[E42:[[S80:trID]]:form-id]].donation=form1">Self Pledge 
+            <div class="borderWrap">
+                <div class="borderOutline">
+                    <div class="borderLeft"></div>
+                </div>
+            </div>
+        </a>
+    ]]
+</div>
+
+<footer>
+    <div class="container">
+        <div class="left">
+            <a target="_blank" href="https://secure2.convio.net/mda/site/SPageNavigator/musclewalk_splash.html"><img src="../images/content/teamRaiser/2016mw-logo-white.png" alt="MDA Muscle Walk">
+            </a>
+            <div class="footerActions left"></div>
+            <div class="clear"></div>
+        </div> 
+        <div class="right socialMedia">
+            <p>Simplify your fundraising with the free Muscle Walk App!</p>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.charitydynamics.mdamusclewalk"><img src ="https://secure2.convio.net/mda/images/content/teamRaiser/googlePlay.png" "Muscle Walk App on Google Play" /></a>
+            <a target="_blank" href="https://itunes.apple.com/us/app/mda-muscle-walk/id895501429?mt=8"><img src ="https://secure2.convio.net/mda/images/content/teamRaiser/appStore.png" "Muscle Walk App at App Store" /></a>
+
+        </div>           
+        <div class="clear"></div>            
+    </div>
+</footer>    

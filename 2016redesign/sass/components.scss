@@ -1,0 +1,186 @@
+@import 'mixins';
+/*-------------------------
+HERO
+----------------------------*/
+.splash .jumbotron{padding:0;background: url('../../../images/content/teamRaiser/2016mw-hero.jpg') no-repeat scroll center top transparent;margin:0; @include bgSize(cover); max-height:500px;
+	.container{position: relative;max-width: $maxWidth}
+	
+}
+.jumbotron{margin:0;padding:9% 0;max-height:250px;background: url('../../../images/content/teamRaiser/mwHero-gen.jpg') no-repeat scroll center top transparent;@include bgSize(cover);
+}
+.heroBox{max-width:600px;color:#fff; border: $borderWidth solid $secondaryColor;border-bottom:0 none;padding:40px 20px;text-align: center;float:right;margin:11% 0;text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5);position: relative;
+		h1{font-size:$headlineFont; font-family:$customFontBold;color:#fff;}
+		p{font-size:$bigFont;margin:0;font-family: $customFont;}
+}
+@media(min-width: 1051px){
+	.splash .jumbotron{min-height:500px;}
+}
+@media(max-width: 1050px) {
+	.jumbotron .heroBox{max-width:450px;margin: 5% 0;}
+}
+@media(max-width: 767px) {
+	.splash	.jumbotron {background-position: 0; @include heroScaleDown(20%, 300px);
+		.heroBox{display:none;}
+	}
+	.mobileShow.heroWrap{
+		display:block;background-color:$primaryColor;
+		.heroBox{margin:$smallMargin 0;padding:10px;float: none;max-width:100%;
+			h1{margin:0 0 10px;font-size: $bigFont}
+			p{font-size:$fontBody;margin:0 0 15px;}
+		}
+	}
+}
+@media(max-width:567px){
+	.splash .jumbotron{background-position: left;  @include heroScaleDown(25%, 300px);}
+	.jumbotron{padding:0;background:none;}
+}
+
+/*------------------------------
+EVENT SEARCH
+-------------------------------*/
+.results {padding: $halfMargin 0 0;}
+.eventEntry{padding:0 0 $halfMargin; margin: 0 0 $halfMargin;border-bottom: 1px solid $secondaryColor;
+	.right{text-align:right;}
+	.fa {color:$linkColor;}
+}
+.eventEntry:last-child{border:0 none;}
+.searchResults {margin:0 0 $bigMargin;}
+.addressIcon{background: url('../../../images/content/teamRaiser/mapIcon-aqua.png') no-repeat scroll 0 0;background-size:14px;width:14px;height:25px;vertical-align: middle;display: inline-block}
+.eventLocation:hover {color:$redColor;
+	.addressIcon{background-image: url('../../../images/content/teamRaiser/mapIcon-red.png')}
+}
+
+@media(max-width:767px) {
+	.searchResults {margin:0 0 $halfMargin;}
+	.eventSearch {
+		margin:$halfMargin auto 0;
+		form{display: block;float:none;text-align: center;
+			#zipInputContainer{margin:auto;width:260px;overflow: hidden;}
+		}
+		span {display: block;text-align: center;width:100%;margin: 0 0 $smallMargin;}
+	}
+	.eventEntry div{
+		clear:both;float:none;
+		p{margin:0;}
+		p,span{line-height: 1.25}
+	}
+	.eventEntry div.right{text-align:left;}
+	.eventEntry:last-child{margin:0;}
+}
+/*-----------------------------
+EVENT FEATURE
+-------------------------------*/
+.aboutEvent {border-top:15px solid $secondaryColor;
+	.eventImgs img{width:33.33333%;float:left;}
+	.tagline {text-align:center; clear:both;}	
+}
+.eventFeature {background:$darkGrey;min-height:470px;
+	.aboutText {background:$darkGrey;float:left; width:40%;padding:$smallMargin 2.5% 0 0;max-height:445px;overflow:hidden;
+		h2{color:$secondaryColor;margin:0 0 $smallMargin;}
+		p{color:#fff;}
+	}
+	.featureHero{background:url('../../../images/content/teamRaiser/walkAboutHero.jpg') no-repeat scroll 0 0 transparent;width:55%; @include bgSize(cover);position: absolute;right:0;}
+}
+
+@media(max-width:1250px){
+	.eventFeature {
+		.featureHero {background-position-x: 33%;}
+	}
+}
+@media(max-width:1023px){
+	.eventFeature {
+		.featureHero {background-position-x: 40%;width:50%;}
+		.aboutText{width:45%;} 
+	}
+}
+@media(max-width:767px) {	
+	.eventFeature {
+		.featureHero{@include heroScaleDown(150px, 300px);width:100%;
+			.arrowRight{display:none;}
+		}
+		.aboutText{width:100%;float: none;margin-top:300px + $halfMargin;margin-bottom:$halfMargin;padding:0;max-height:none;}
+	}
+
+}
+@media(max-width:567px) {
+	.aboutEvent {border-top:0 none;
+		.tagline  {text-align: left;
+			.container{max-width:300px;position: relative;}
+			img{position: absolute;top:26%;right:0;margin:0;}
+			
+		}
+		.eventImgs img{width:100%;float:none;}
+		
+	}
+	.eventFeature {
+			.featureHero{@include heroScaleDown(100px, 200px);}
+			.aboutText{margin-top:200px + $halfMargin;text-align:center;}
+		}
+}
+/*---------------------------------------
+FEATURED PARTICPANT ROTATOR
+-----------------------------------------*/
+.featuredParticipant {
+	padding: $bigMargin 0;background: url('../../../images/content/teamRaiser/walkFeatureBkrd.png') no-repeat scroll 100% 0 transparent; @include bgSize(cover);
+	.right{width:65%;}
+	.owl-buttons {width:500px;overflow:hidden;margin: $smallMargin auto 0;
+		.customBtn{position: relative;width:200px + $halfMargin;}
+		.owl-prev{float:left;}
+		.owl-next{float:right;}
+	}
+	.owl-theme .owl-controls .owl-buttons div {color:inherit;margin:0;padding:0;@include border-radius(0);background:transparent;opacity:1;display: block;font-size: 18px;
+	}
+	.owl-theme .owl-controls .owl-buttons div:hover{color:$primaryColor;}
+}
+@media (max-width:1023px){
+	.featuredParticipant {
+		.left{width:35%;}
+		.right{width:60%;}
+	}
+}
+@media(max-width:767px){
+	.owl-theme .owl-controls{margin-top:0;}
+	.featuredParticipant{
+		padding: $halfMargin;
+		background:none scroll 0 0 #fff;
+		.owl-buttons{width:100%;}
+		.left, .right{float:none;width:100%;}
+		.left img {display: block;margin:0 auto $smallMargin;}
+	}
+	.featuredParticipant .owl-theme .owl-controls .owl-buttons div.customBtn{float:none;width:100%;margin:0 auto $smallMargin;}
+}
+
+/*---------------------------------------
+THANK YOU PAGES
+-----------------------------------------*/
+.fbShare, .twShare {width:48%;}
+.fbShare span, .twShare span{vertical-align: super}
+.fbShare a, .twShare a {color:$primaryColor;font-size:$mediumLarge;text-decoration: none}
+.fbShare a:hover, .twShare a:hover {color:$cyanColor;}
+.fbShare .fa, .twShare .fa{font-size:50px;margin: 0 20px;}
+.fbShare {float:left;text-align: right}
+.twShare{float:right;text-align: left;}
+div#fr_thanks_page div.confirm-email-msg{font-size:$fontBody;}
+@media(max-width:767px){
+    .fbShare, .twShare {width:100%;float:none;text-align: center;margin:0 auto $halfMargin;}
+}
+/*------------------------------------------
+FEEDS
+-------------------------------------------*/
+.flickrWrap{clear: both;padding:$smallMargin 0 0;}
+.flickrPhoto{width:15%;margin: 0 0 0 2%;float: left;display: inline-block;}
+.flickrPhoto.spot1{margin:0;}
+.instagramFeed .fa-instagram{margin: 0 0 0 5px;}
+.mobileShow .flickrPhoto {width:96%;text-align:center; margin: 0 0 20px 2%;}
+.mobileShow .flickrPhoto.spot1 {margin: 0 0 20px 2%;width:96%;}
+@media (max-width:1023px) {
+    .flickr_badge_image img{vertical-align: top}
+    .instagramFeed .tagline{padding:$halfMargin 0;text-align:center; 
+    	span{float:none;clear:both;width:100%;padding:0;}
+	}
+}
+@media (max-width:767px) {
+	.desk.flickrWrap{display: none;}
+	.mobileShow.flickrWrap{display: block}
+	.mobileShow .flickrPhoto.spot4,.mobileShow .flickrPhoto.spot5,.mobileShow .flickrPhoto.spot6{display: none;}
+}

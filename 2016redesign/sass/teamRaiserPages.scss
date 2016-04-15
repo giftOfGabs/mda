@@ -1,0 +1,184 @@
+@import 'mixins';
+/*---------------------------------------
+GREETING PAGE
+-----------------------------------------*/
+#TeamRaiserQuickSearch span{display: none;}
+#entry_header_container{display:none;}
+div.tr-page-container #entry_page_custom_html{padding:0;}
+.entry {
+	.content{margin:$bigMargin auto;}
+	.eventInfo {margin:$halfMargin auto;
+		h2{text-align: center;
+			a{font-size:inherit;}
+			a:hover{cursor: pointer}
+		}
+		h3{font-size:$mediumLarge;font-family: $customFontBold;margin:0 0 10px;text-align: center;margin: 0}
+		p{text-align: center;font-family: $customFont;font-size:$mediumLarge;line-height: 1.2;
+			a{font-size:inherit;}
+		}
+		.moreDetails{display: block;text-align: center;font-family: $customFont;margin:$halfMargin auto 0;}
+	}
+	.ctaWrap {width:100%;max-width:650px;margin:$halfMargin + 15px auto 0;
+		.customBtn {width:49%;}
+	}
+	.aboutEvent {border-bottom:25px solid $secondaryColor;border-top:0 none;}
+	.aboutEvent.noBorder{border:0 none;}
+	.eventFeature {
+		height:470px;
+		.featureImg {background: $secondaryColor;width:45%;position:absolute;left:0;
+			.imgWrap{max-width:450px;margin: 0 0 0 auto;
+				img{max-width:318px;max-height:318px;margin:16.8% 0;float:left;}
+				.arrowLeft{float:right;}
+			}
+		}
+		.aboutText{width:55%;position: absolute;right:0;padding:50px 2.5%;
+			.missionText{max-width:550px;margin:0 auto 0 $halfMargin;}
+		}
+	}
+	.mission{margin:$halfMargin auto 0;}
+}
+.topLists {text-align:center;
+	.content {
+		input{display: inline-block;float: left;}
+		.form-control{width:calc(100% - 60px);}
+	}	
+	.onlyList{float:none;margin: auto}
+	.list{padding: $smallMargin 5% 0;}
+	.listRow{text-align: left;margin:0;}
+	h2{margin:0;}
+	p{font-family: $customFont;font-size:$mediumFont;margin:0;}
+	.badge-icon{display: none;}
+	span.display-name{display: inline-block;}
+	.list-name-container,.list-value-container{display: inline-block;float: left;line-height: 1.75}
+	.list-name-container a.indicator-link{@include textCut(200px);}
+	.list-value-container{margin:0 0 0 10px;}
+	div, span{font-family:$customFont;font-size: $fontBody}
+	a{font-family: $customFontBold;font-size:$fontBody;line-height: 1.75}
+	a:nth-child(3){margin: 0 0 0 10px;}
+
+
+}
+@media(max-width:1223px){
+	.entry .eventFeature {
+		.aboutText {padding: 25px 2.5% 0;
+			div.tr-page-container{margin: 0 auto 0 2%;}
+		}
+	}
+}
+@media(max-width:1049px){
+	.entry .eventFeature {
+		.aboutText {width:58%;position: static;
+			div.tr-page-container{margin: 0 auto 0 0;}
+		}
+		.featureImg {width:42%;position: static;float:left;
+			.imgWrap img{margin:17.5% 0 17.5% 5%;}
+		}
+	}
+	.topLists {
+		.col-md-6{width:48%;padding:0;}
+		.topParticipant{float:left;}
+		.topTeam{float:right;}
+	}
+}
+@media(max-width:1023px){
+	.entry .eventFeature { height:auto;background:transparent;overflow:hidden;
+		.aboutText {width:100%;padding:$halfMargin 4%;margin:0;
+			.missionText{margin: 0;max-width:100%;padding:0 4%;}
+		} 
+		.featureImg {width:100%;overflow: hidden;float:none;
+			.imgWrap {margin:auto;max-width:318px;
+				img{display:block;margin:$halfMargin auto;}
+				.arrowLeft{display: none;}
+			}
+		}
+	}
+	.topLists {
+		.col-md-6{width:100%;padding:0;clear:both;margin:auto;max-width:480px;}
+		.topParticipant{float:none;}
+		.topTeam{float:none;margin: $halfMargin auto 0;}
+	}
+}
+@media(max-width:767px){
+	.entry .content{margin:$halfMargin auto;}
+	.entry .ctaWrap .customBtn{width:100%;float:none;margin:0 auto $smallMargin;}
+	.topLists {
+		.listRow{margin:0 0 $smallMargin;}
+		a{float:left;line-height: 1.25}
+		a:nth-child(3){clear:left;margin:0 10px 0 0;}
+	}
+	.topLists .list-name-container, .topLists .list-value-container{line-height: 1.25}
+}
+/*------------------------------------------
+PERSONAL AND TEAM PAGES
+--------------------------------------------*/
+.personal .nav .nav-item, .team .nav .nav-item{visibility:hidden;}
+.personal .mastCta, .team .mastCta {display:none;}
+.topSection{margin:$bigMargin auto;}
+.pageTitle{border-bottom: 1px dotted $primaryColor;margin: 0 0 $halfMargin;}
+.pageTitle h2 {margin: 0 0 10px;}
+#team_name{font-size:$bigFont;margin: 0 0 10px;color:$primaryColor;}
+.detailsSection{width:300px;}
+.ctaSection {width:53%;
+	.customBtn{text-transform: none;margin:0;font-size: $mediumFont;width:48%;margin:0 3% 0 0;display:inline-block;}
+	.customBtn:last-child{margin:0;}
+}
+.detailsSection p{margin:0;}
+div#personal_page_image_div, #team_image{margin:$halfMargin 0;}
+.personal .thermWrap, .team .thermWrap{padding: $halfMargin 0 0;}
+.personal .thermInfo, .team .thermInfo{width:45%;width: calc(100% - 300px);}
+.personal .thermInfo strong, .team .thermInfo strong{display: block; clear:both;color:$redColor;font-size:$bigFont;}
+.personal .thermInfo p, .team .thermInfo p{font-size:$mediumLarge;}
+.highlight{padding:$bigMargin 0;border-bottom: $smallMargin solid $secondaryColor;background-color: $primaryColor;
+	h2{color:#fff;border-bottom: 2px dashed #fff;padding: 0 0 10px;margin:0 0 $halfMargin;}
+	.left {width:60%;}
+	.right {width: 30%;}
+	.donorList h2{text-align: center;}
+	.honorRoll .indicator-list-row{font-size:$fontBody;text-align:center;}
+	.honorRoll .indicator-title{display: none}
+	div, span, p {color:#fff;font-size:$fontBody !important;}
+}
+div.indicator-container{border: 0 none;padding:0;}
+div.team-honor-list-row{font-size: $fontBody;}
+.badges{padding: 0 0 $bigMargin;margin: 0 0 $bigMargin;border-bottom: 1px dotted $primaryColor;}
+.badges h2 {border-bottom: 1px dotted $primaryColor;padding: 0 0 10px;margin:0 0 $halfMargin;}
+.TrAchievementBadgeIconListLargeHeader{display:none;}
+div.TrAchievementBadgeLarge{border:0 none;padding: 0 2.5%;width:33%;display: inline-block}
+p.captain img{display: none}
+.teamRoster {margin: $halfMargin 0;}
+.teamRoster h2 {color:#fff;line-height: 50px; padding: 0 0 0 30px;margin: 0;}
+#fr_rich_text_container, #fr_rich_text_container p{font-size:16px;line-height: 1.5}
+div.team-roster-participant-raised{float:left;width:30%;text-align:left;font-size:$fontBody;line-height: 40px;}
+div.team-roster-participant-name{width:50%;padding: 0 0 0 30px;line-height: 40px;
+	img.team-roster-star{float:none;}
+}
+.teamList a.btn {line-height:40px;text-transform: none}
+div.team-roster-participant-row{margin:0 0 5px;padding: 5px 0;}
+div.team-roster-participant-row:nth-child(odd){background-color:$ltGrey}
+
+@media(max-width:950px){
+    .personal .thermWrap, .team .thermWrap{padding:$smallMargin 0 0;}
+    .personal .thermInfo, .team .thermInfo{width:100%;float: none;clear:both;}
+    .personal .radialWrap.left, .team .radialWrap.left{float:none;margin: 0 auto $smallMargin;overflow:hidden;}
+    .personal .thermInfo p, .team .thermInfo p{line-height: 1.25}
+    .cta{overflow: hidden}
+    .ctaSection a.customBtn{display: block;width:100%;margin:0 auto $smallMargin;}
+    .ctaSection a.customBtn:last-child{margin:0 auto;}
+}
+@media(max-width:767px){
+    .cta.mobileShow{margin:0;}
+    .cta.mobileShow, .cta.mobileShow a.customBtn{display: block;}
+    .cta.mobileShow a.customBtn{margin:$halfMargin auto 0;text-transform: none;font-size: $mediumFont;}
+    .ctaSection.desktop .cta{display: none;}    
+    .topSection{margin:$halfMargin auto;}
+    .highlight .left{width:100%;margin: 0 0 $halfMargin;}
+    .highlight .right{width:100%;}
+    .ctaSection, .detailsSection{width:100%;float:none;}
+    img.team-image, .tr-image-div img{display: block;margin:auto;}
+    .tr-image-div .caption{text-align: center;}
+    .personal .thermWrap, .team .thermWrap{padding:0;}
+    .team .jumbotron, .personal .jumbotron{display: none;}
+    div.TrAchievementBadgeLarge{width:100%;}
+    .teamList a.btn{width:150px;margin:auto;display: block;}
+    div.team-roster-participant-raised{float:none;width:100%;text-align: center;}
+    div.team-roster-participant-name{width:100%;text-align: center}
+}

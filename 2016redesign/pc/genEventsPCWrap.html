@@ -1,0 +1,71 @@
+[[?x[[S80:trID]]x::xnullx::::[[U0:evID=[[S80:trID]]]]]]
+[[?x[[S42:0:fr_id]]x::xx::::[[U0:evID=[[S42:0:fr_id]]]]]]
+[[?x[[S334:fr_id]]x::xx::::[[U0:evID=[[S334:fr_id]]]]]]
+[[?x[[S334:FR_ID]]x::xx::::[[U0:evID=[[S334:FR_ID]]]]]]
+
+
+<div class="mastheadWrap mobileShow">
+    <div class="loggedIn">
+        <p>Hi [[S1:first_name]]!</p> 
+        <p><a href="SPageServer?pagename=general_events_myevent">My Events</a> <span>|</span> <a href="ConsProfileUser?dispMode=edit&pw_id=2603&s_AffiliateSecCatId=1">My Profile</a> <span>|</span> <a href="UserLogin?logout=&NEXTURL=[[T1:http://www2.mda.org/site/TR?fr_id=[[S80:evID]]&pg=entry]]">Log out</a></p>
+    </div>
+    <a class="navbar-brand" href="TR?pg=entry&fr_id=[[S80:evID]]"><img class="original" src="https://secure2.convio.net/mda/images/content/teamRaiser/mdaLogo.png" alt="MDA General Events" /></a>
+</div>
+<div class="mastheadWrap desk">        
+    <div class="container">        
+            <a class="navbar-brand" href="TR?pg=entry&fr_id=[[S80:evID]]"><img class="original" src="https://secure2.convio.net/mda/images/content/teamRaiser/mdaLogo.png" alt="MDA General Events" /></a>
+        <div class="mastheadActions">
+            <div class="loggedIn right">
+                <p>Hi [[S1:first_name]]! 
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span> 
+                <a href="SPageServer?pagename=general_events_myevent">My Events</a>
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <a href="ConsProfileUser?dispMode=edit&pw_id=2603&s_AffiliateSecCatId=1">My Profile</a> 
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <span class="utilityHelp"></span>
+                <span class="ux-pipe-divider">&nbsp;|&nbsp;</span>
+                <a href="UserLogin?logout=&NEXTURL=[[T1:http://www2.mda.org/site/TR?fr_id=[[S80:evID]]&pg=entry]]">Log out</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>  
+
+<div class="tagline welcome">
+    <div class="container">
+        <h1>Welcome, [[S1:first_name]]!</h1>
+    </div>
+</div>
+<div class="ctaBtn">
+    <a class="customBtn sendEmail" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" href="#email-compose">Send Email 
+        <div class="borderWrap">
+            <div class="borderOutline">
+                <div class="borderLeft"></div>
+            </div>
+        </div>
+    </a>
+    [[?[[E48:[[S80:evID]]:if-is-self-donor]]::TRUE::
+        
+    ::
+        <a class="customBtn selfDonate" href="http://[[S29:DOMAIN]]/site/Donation2?idb=[[S76:idb]]&df_id=[[E42:[[S80:evID]]:form-id]]&FR_ID=[[S80:evID]]&PROXY_ID=[[S1:cons_id]]&PROXY_TYPE=20&[[E42:[[S80:evID]]:form-id]].donation=form1">Self Pledge 
+            <div class="borderWrap">
+                <div class="borderOutline">
+                    <div class="borderLeft"></div>
+                </div>
+            </div>
+        </a>
+    ]]
+</div>
+
+<footer>
+    <div class="container">
+        <div class="left">
+            <a target="_blank" href="TR?pg=entry&fr_id=[[S80:evID]]"><img src="../images/content/teamRaiser/mdaLogoWhite.png" alt="MDA General Events">
+            </a>
+            <div class="footerActions left"></div>
+            <div class="clear"></div>
+        </div> 
+                
+        <div class="clear"></div>            
+    </div>
+</footer>    

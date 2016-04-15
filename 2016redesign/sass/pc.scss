@@ -1,0 +1,263 @@
+@import 'mixins';
+html {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+  box-sizing: border-box;}
+*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.android{
+	.yui-skin-ux{font-family:'Roboto', sans-serif !important; 
+		.fa{font-family: FontAwesome !important;}
+		p, div, table, tr, th, td,span,button.primary, .yui-push-button.default, button:not([class^="janrain"]):not(.email-wizard-recipients-actions-button), .yui-push-button, .yui-panel-container.yui-dialog span.default button, .tagline h1, .customBtn, .track-progress, #hd-nav li a, #hd-nav li a:link {font-family:'Roboto', sans-serif !important;}		
+	}
+}
+.janrainSocialRoot .janrainShareForm{position: static;}
+.yui-skin-ux {
+	*,html,body, p, div, table, tr, th, td{color:$greyColor;font-family:$customFont;}
+	.fa{font-family: FontAwesome !important;}
+	p{margin:0 0 $smallMargin;}
+	a, a:link{color:$cyanColor;font-size:18px;font-weight:normal;}
+	span{color:inherit;font-size:inherit;font-family:inherit;line-height:inherit;}
+	.page-header, #msg_cat_progress_bar_title{color:$primaryColor;font-size:$bigFont;font-family:$customFontBold;}
+	h1, div.h1-imposter{color:$primaryColor;font-family:$customFontBold;}
+	#sidebar .side-content.editable h3, #sidebar .sidebar-form h3{margin:0;}
+	h2{color:$primaryColor;font-size:$mediumLarge;font-family:$customFontBold;}
+	h3{font-size:$mediumFont;margin: 0 0 $smallMargin;}
+	select{-webkit-appearance: menulist;-moz-appearance: menulist;}
+	.yui-dialog .bd label{font-size:16px;}
+
+	/*------------------------------
+	LOADING BAR
+	--------------------------------*/
+	.yui-panel .hd{background:$primaryColor;}
+	.ui-progressbar .ui-progressbar-value {background: none repeat scroll 0 0 $secondaryColor; /* loading bar */}
+	.ui-widget-header {border: 1px solid transparent; /* loading bar border */}
+	.ui-corner-left, .ui-corner-right, .ui-corner-all {@include border-radius(0);}
+	.ui-progressbar {background: none repeat scroll 0 0 #FFFFFF; /* LOADING BAR BACKGROUND */border-color: $secondaryColor;}
+	#wait_c {background: url("https://secure2.convio.net/mda/images/content/teamRaiser/mdaLogo.png") no-repeat scroll center 120px #FFFFFF !important;border: 5px solid $primaryColor;  height: 210px; top: 20px !important; width: 340px; @include border-radius(0); -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 1);-moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 1);-ms-box-shadow: 0px 0px 5px rgba(50, 50, 50, 1);box-shadow:0px 0px 5px rgba(50, 50, 50, 1);padding:0;}
+	#wait_c .underlay{display:none;}
+	/*----------------------------
+	LAYOUT
+	------------------------------*/
+	#doc2{width:100%;}
+	#hd{max-width:100%;margin:auto;}
+	.container{margin: auto}
+	.ux-main{margin-bottom:0;}
+	#bd-org-html.ux-block2{padding:0;}
+	#bd{max-width:1000px;margin: $halfMargin auto;background:transparent;}
+	#bd.full {max-width:100%; margin: 0 auto;
+		div#yui-main{width:100% !important;margin:auto;
+			div#content{border: 0 none;width:100%;max-width:100%;}
+		}
+	}
+	div.ux-main div#yui-main div#content{border:0 none;}
+	#content.yui-b{padding:0}
+	div#content{padding:0;max-width:1000px;margin:auto;}
+	div.ux-main div.dashboard-bd{border: 0 none;
+		div#yui-main{margin-right:15px;}
+	}
+	#sidebar{width:18em !important;}
+	#sidebar.homeSide{max-width:1000px;margin:0 auto !important;width: auto !important; float:none !important;text-align: right
+
+	}
+	/*-----------------------------------
+	BUTTONS
+	-------------------------------------*/
+	button.primary, .yui-push-button.default, button:not([class^="janrain"]):not(.email-wizard-recipients-actions-button), .yui-push-button, .yui-panel-container.yui-dialog span.default button{background: $secondaryColor !important; border: 0 none !important;border-radius:0 !important;color:#fff;font-size:18px;outline:none;font-weight:normal !important;}
+	button.primary:hover, .yui-push-button.default:hover, button:not([class^="janrain"]):not(.email-wizard-recipients-actions-button):hover, .yui-push-button:hover, .yui-panel-container.yui-dialog span.default button:hover{background: $cyanColor !important;}
+	a.customBtn, .customBtn{color:$greyColor;font-size:$mediumFont;}
+	a.customBtn:hover{color:$primaryColor;}
+	.ctaBtn {clear:both;margin: 0 auto $halfMargin;max-width:635px;text-align:center;
+		.customBtn{margin:0 auto;display: inline-block}
+		.selfDonate{margin-left: 5%;}
+	}
+	.yui-panel .ft .yui-button.yui-push-button{padding:0;
+		button{padding:10px 20px !important;}
+		
+	}
+	.ui-button-text-icon-secondary .ui-button-icon-secondary{display: none;}
+	div#sidebar {
+		div#address_book_add #msg_cat_add_contact_submit_button, div#sidebar div#address_book_add button, div#sidebar div#address_book_add #msg_cat_add_contacts_cancel_link, .sidebar-actions button {float:none;margin:0 auto $smallMargin;}
+	}
+	/*-------------------
+	MASTHEAD
+	----------------------*/
+	.mastheadWrap {position: relative;
+		.navbar-brand{float:left;position:static;}
+		.loggedIn {
+			p{font-size:16px;}
+			a{margin:0;font-size:14px;}
+			#msg_cat_nav_help_link{color:inherit;font-size:14px;}
+		}
+	}
+	#hd-small{display: none;}
+	.ux-hd-row{margin:0;}
+	/*----------------------
+	NAV
+	------------------------*/
+	#hd-nav {max-width:1000px;margin: auto;float:none;
+		li {background-color: $primaryColor;@include border-radius(0);
+			a, a:link{display: block;font-size:20px;font-family:$customFontBold;border:0 none;padding: 0 20px;line-height:50px;}
+		}
+		li:hover, .selected{background-color:$cyanColor;@include border-radius(0); border: 0 none;
+			a{color:#fff;}
+		}
+
+	}
+	.tagline{height:70px;
+		.container{position: relative;}
+		h1{font-family:$customFontBold;color:#fff;font-size:$headlineFont;line-height: $bigMargin;}
+	}
+
+	/*---------------------
+	HOME
+	------------------------*/
+	#msg_cat_overview_label, #msg_cat_personal_report_label{display:none;}
+	#msg_cat_what_next_question{display: none;}
+	#content.yui-b .tagline.steps h1{line-height:$bigMargin;color:#fff;font-family:$customFontBold;margin:auto;font-size:$bigFont;}
+	#bd-what-next{margin: 0 auto $halfMargin;
+		.tagline{border-bottom:2px solid #fff;} 
+		#what-next-answer{display: none;}
+		.container{margin: 0 auto;}
+	}
+	.nextStepsWrap{border-bottom:20px solid $primaryColor;margin:0 0 $halfMargin;}
+	.what-next-answer-item{border:0 none;border-bottom: 2px solid #fff;background:$secondaryColor;@include border-radius(0);margin:0;display: block;height:80px;padding:8.5px 0;
+		.fa-arrow-right{display: none;}
+		.number{font-size:45px;line-height:60px;}
+	}
+	.what-next-answer-item:hover{background:$primaryColor;cursor:pointer;
+		.what-next-type, .what-next-message{color:#fff;}
+		.what-next-icon{background: $secondaryColor;}
+		.fa-arrow-right{display: block;color:$primaryColor;font-size:45px;line-height: 60px;}
+		.number{display: none;}
+	}
+	.what-next-icon{margin:0 10px 0 0;padding:0;color:$primaryColor;font-family: $fontStack;display:inline-block;@include circle(60px);background:#fff;text-align:center;line-height: 0;position: relative;font-weight:bold;padding:0;}
+	.what-next-message-container{width:85%;width:calc(100% - 90px);display: inline-block;}
+	.what-next-type{font-size:$mediumLarge;color:$darkGrey;font-family:$customFontBold;}
+	.what-next-message{font-size:16px;color:$darkGrey;font-family:$customFontBold;}
+
+	.what-next-answer-item.what-next-completed{margin:0;background: #fff;border-color:$primaryColor;
+		.what-next-icon{background:$primaryColor;}
+		.what-next-type, .what-next-message{color:$primaryColor;font-family:$customFontBold;}
+		.fa{color:#fff;line-height: 60px;font-size:45px;}
+	}
+		
+	#captainsMessage{text-align: center;
+		#captainsMessageEditLink{text-align: center;}
+	}
+	/*---------------------------
+	BADGES
+	-----------------------------*/
+	.badges{border: 0 none;padding:0;margin:0 auto $bigMargin;text-align: center;
+		h3, p{text-align:center;}
+		.badge{display: inline-block;width:130px;margin:0 0 $smallMargin;
+			img{display: block;margin:auto;}
+			span{color:$darkGrey;font-size: 16px;display: block;text-align:center;font-family:$customFontBold;margin: 10px 0 0;}
+			span.unlocked{color:$primaryColor;}
+		}
+	}
+	/*---------------------
+	PROGRESS BARS
+	-----------------------*/
+	#bd-personal-progress{padding:0;margin:auto;max-width:710px;}
+	div.progress-bar-outer{@include border-radius(0);}
+	div.progress-bar-inner{background: $secondaryColor;border:0 none;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;@include border-radius(0);}
+	.fundraising-progress {
+		.section{border:0 none;background:none;float: left;}
+		.section.progress-amt-raised{margin-left:0;padding-left:0;}
+	}
+	.big-block{color:$primaryColor;font-family:$customFontBold;margin:0 0 5px;}
+	.tiny-block{color:$greyColor;font-size:$fontBody;display: block;margin:0 0 5px;}
+	#progress-change-goal-link, #edit-team-goal-section{display: none;}
+
+	/*---------------------
+	RECENT ACTIVITY
+	-----------------------*/
+	#bd-recent-activity{background:url("https://secure2.convio.net/mda/images/content/teamRaiser/walkFeatureBkrd.png") no-repeat scroll 100% 0 transparent;@include cover();padding-bottom:$bigMargin;margin-top:$bigMargin;min-height:500px;
+		#msg_cat_recent_activity_header{font-family:$customFontBold;font-size:$mediumLarge;max-width:1000px;margin:$halfMargin auto;color:$primaryColor;}
+		a, a:link{font-size:inherit;}
+		#bd-recent-activity-detail{max-width:1000px;margin:auto;}
+		.yui-dt thead {background:none transparent;}
+		.yui-dt th{border:0 none;border-bottom:1px solid $secondaryColor;}
+		.yui-dt-liner{padding:15px 1%;}
+		tr.yui-dt-even,.yui-dt tr.yui-dt-odd{background-color: transparent;}
+		td{border:0 none;border-bottom:1px solid $secondaryColor;}
+		span.yui-dt-label{color:$greyColor;font-size:$fontBody;}
+
+	}
+
+	.bd-donation-history h3{margin:$smallMargin 0;}
+	/*EMAIL*/
+	#email-compose-templates h3{margin: $smallMargin 0 0;}
+	.email-wizard-status-indicator,.addressbookimport-wizard-status-indicator{top:0;display: none;}
+	.track-progress li.email-wizard-nav-selected + li > span:before, .track-progress li.addressbookimport-wizard-nav-selected + li > span:before, .track-progress li.email-wizard-nav-selected:hover + li > span:before, .track-progress li.email-wizard-nav-unselected:hover + li > span:before, .track-progress li > span:before{border-left-color:$primaryColor;}
+	.track-progress li.email-wizard-nav-selected, .track-progress li.email-wizard-nav-selected > span, .track-progress li.addressbookimport-wizard-nav-selected > span, .track-progress li.email-wizard-nav-selected:hover > span, .track-progress li.email-wizard-nav-unselected:hover > span, .track-progress li.email-wizard-nav-selected span:before {border-left-color:$primaryColor;}
+	.track-progress li, .track-progress li.email-wizard-nav-selected, .track-progress li.email-wizard-nav-selected > span,  .track-progress li.email-wizard-nav-selected:hover > span, .track-progress li.email-wizard-nav-unselected:hover > span{background-color:$primaryColor;}
+	.track-progress li.email-wizard-nav-selected > span, .track-progress li.addressbookimport-wizard-nav-selected > span, .track-progress li.email-wizard-nav-selected:hover > span, .track-progress li.email-wizard-nav-unselected:hover > span, .addressbookimport-wizard-nav-selected .addressbookimport-wizard-status-indicator{background-color:$primaryColor;color:#fff;font-family:$customFontBold;}
+	.track-progress li.email-wizard-nav-selected>span, .track-progress li.email-wizard-nav-selected:hover>span, .track-progress li.addressbookimport-wizard-nav-selected>span, .track-progress li.addressbookimport-wizard-nav-selected:hover>span{color:$secondaryColor;}
+	div#email-contacts-content div.search input#contacts-search-text{margin: 0 0 10px}
+	div#email-contacts-content div#contacts-actions a, div#email-contacts-content div#contacts-actions button{font-size:16px;}
+	#email-wizard-contacts-table td.email-wizard-contacts-checkbox{width:35px;}
+
+
+
+	footer .container{margin:auto;
+		.footerActions{margin:0 0 0 50px;}
+		a,a:link,p, span{color:#fff;font-size:14px;}
+		.side-links{margin:0;text-align: left;
+			li{padding:0;line-height:1.75;}
+		}
+		#subnav_oci_link{display: none;}
+	}
+}
+@media(max-width:1024px){
+	.yui-skin-ux{
+		#hd-nav {max-width:100%;
+			li, .selected {padding:0;margin:0;
+				a, a:link{padding:0 0 0 15px !important;}
+			}
+		}
+		#content.yui-b{padding:0 !important;}
+		.what-next-answer-item{height:auto;padding:10px 0;}
+		.what-next-icon{display: block;margin:0 auto 10px !important;}
+		.what-next-message-container{width:100%;text-align: center;}
+		.ctaBtn {
+			.customBtn, .selfDonate{margin: 0 auto $smallMargin;display: block;}
+		}
+		.fundraising-progress .section{padding:10px 0;}
+		.right.socialMedia{float:left;margin:$halfMargin 0 0;}
+
+	}
+}
+@media(max-width:768px){
+	.yui-skin-ux{
+		.mastheadWrap .loggedIn {
+			p{margin:0;color:#fff;}
+			span{color:#fff;}
+			a{color:#fff;text-decoration:underline;}
+		}	
+		#contacts-table-info-block .partial{width:100%;float:none;}
+		.ctaBtn {
+			.customBtn, .selfDonate{margin: 0 auto $smallMargin;display: block;}
+		}
+		
+		
+		div.progress-bar-outer{display: none;}
+		#contacts-list tbody tr{display: table}
+		footer {
+			.right.socialMedia{display: block;}
+			.container .footerActions{margin:0;}
+			.left > a{float:left;margin:0 0 $halfMargin;}
+		}
+	}
+}
+@media (max-width:568px){
+	.janrainSocialRoot .janrainShareForm{max-width:275px;width:100%;}
+	.yui-skin-ux {
+		 div#email-wizard-contacts button{display: block;margin:20px 0 0;}
+		#bd-recent-activity {
+			span.yui-dt-label{font-size: 12px;}
+			.yui-dt { 
+				th, td{width:auto;max-width:23%;}
+				.recent-activity-date{width:50px !important;}
+			}
+		}
+	}
+}

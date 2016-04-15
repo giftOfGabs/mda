@@ -1,0 +1,153 @@
+@import 'mixins';
+/*-------------------------------
+TYPOGRAPHY
+---------------------------------*/
+*, html, body, form, input, input.AddressBookButtons, input.Advocacy, select, select.Advocacy, textarea, legend, ul, ol, li, option, table, tr, th, th.rfl_infoStatus, td, td.AlertListDescription, td.cstmBack, p, p.cstmBtnText, p.cstmFrame, p.cstmHeading, p.cstmText, p.cstmTitle, p.dividerHeading, p.scrollingText, span.cstmHeading, a, #navList, .AdvocacyInstructions, .AdvocacyNSFix, .BlogHeader, .Button, .Divider, .FieldLabels, .FormBox, .FormBox06, .FormBoxHeader, .Hint, .Instructions, .Instructions, .ListItem0, .ListItem1, .NetscapeFix, .NoteText, .ObjTitle, .PhotoLinks, .Premiums, .ProgressBox, .ProgressBoxCurrent, .SectionHead, .SmallButton, .Smaller, .SmallerC, .TribBtnText1, .Upgrades, .WhatNext, .alphacube_content, .dialog_content, .dialog_title, .Explicit, .fr_register_another, .paraBlueSansSmall, .smallBlack, .smallSans, .smallSansBold, .smallWhiteBoldSans, .smallWhiteSans, .smallestBlackSans {font-family:$fontStack;color:inherit;}
+.fa {color:inherit;}
+span, strong{font-family: inherit;color:inherit;}
+*, body,html{color:$darkGrey;}
+a.btn, a.btn:visited, a.cstmBtnText:hover, a.cstmBtnText:link, a.cstmBtnText:visited, input.btn, input.btnLg, input.btnMed, input.btnMini, input.btnSm,{font-family:$customFont;}
+p,span{font-size: $fontBody;line-height:1.75;}
+p{margin:0 0 $smallMargin;}
+a, a:link, a:visited, div.responsive a:visited, div.responsive a:link, #login-div-content a{text-decoration: none;font-size:$fontBody;color: $linkColor;}
+a:hover, div.responsive a:hover, #login-div-content a:hover{text-decoration: underline;color:$redColor;}
+h1,h2,h3 {margin:0 0 $smallMargin;line-height:1.2;}
+h1{font-size:$biggestFont; color:$primaryColor;font-family:$customFont;}
+h2{font-family: $customFontBold;font-size:$bigFont;color:$primaryColor;
+	a, a:link{font-size:inherit;}
+}
+h3{font-family: $customFontBold;font-size:$mediumFont;color:$darkGrey;}
+ol, ul,li {font-size:$fontBody;}
+.splash h1 {margin: 0 0 $halfMargin;}
+.AutoOptInWarningMessage{color:$redColor;}
+/*------------------------------
+GENERAL
+--------------------------------*/
+.mobileShow{display:none;}
+.right{float:right;}
+.left{float:left;}
+.clear{clear:both;}
+img{max-width:100%;}
+hr.border {padding:0 0 $halfMargin;margin: 0 0 $halfMargin; @include dashedBorder(); clear:both;border-top: 0 none;}
+hr.border:last-child{margin:0;padding: 0 0 $halfMargin;}
+.noBorder{border: 0 none;}
+@media(max-width:767px){
+    hr.border {padding:0 0 $halfMargin;margin: 0 0 $halfMargin;}
+}
+/*---------------------------------
+TABLES
+----------------------------------*/
+.pageBuilder table.lc_Table, .pageBuilder td.lc_Cell, .pageBuilder tr.lc_Row0, .pageBuilder tr.lc_Row1 {background:transparent;border:0 none;}
+/*-----------------------------
+LAYOUT
+-------------------------------*/
+.wrapper{position: relative}
+.container{max-width:$maxWidth;width:100%;padding:0;}
+.content{margin:$halfMargin auto;}
+.splash .content,{margin:$bigMargin auto;}
+@media(max-width: 1050px){
+    .container{padding-left:2%;padding-right:2%;}
+}
+@media(max-width:767px) {
+    .container{padding-left:4%;padding-right:4%;}
+    .splash .content{margin:$halfMargin auto;}
+}
+/*---------------------------
+PAGEBUILDER PAGES
+-----------------------------*/
+ul.contribution span {background: $primaryColor;border-radius: 50%;color: #fff; display: inline-block;
+    font-size: 140%; font-weight: bold;height: 75px;line-height:75px; margin-right: 10px; padding:0; text-align: center; width: 75px;}
+ul.featured-list li {@include dashedBorder();font-size: 120%;line-height: 150%;list-style: none outside none; padding: 20px 0;}
+ul.featured-list {max-width: 620px;margin: 20px auto;padding:0;}
+.incentiveImg{ 
+	margin:0 0 $halfMargin;
+	div {display: inline-block;text-align: center;width:45%;}
+	span{display: block;}
+	img{max-width:200px;margin: 0 0 5px 0;}
+}
+.cosImg{margin:0 0 $smallMargin;
+	img{max-width:200px;margin:0 0 5px;}
+	span{display: block;text-align: center;}
+	div{text-align: center}
+}
+div.responsive .volunteerSurvey, .volunteerSurvey {margin: $halfMargin 0;padding:$smallMargin;background: $ltGrey;
+	form{max-width:100%;margin:0 auto;}
+	select {-webkit-appearance:menulist;-moz-appearance:menulist;display: block;margin:0 0 $smallMargin;}
+	h3{text-align:center;}
+	label,span{margin:0;line-height: 1.2;font-size:$fontBody;float:none;font-weight:bold;white-space:inherit;display: block}
+	input[type="text"],select{@include formFields(50px);background:#fff;}
+	input[type="text"],select,textarea {max-width:480px;margin:5px 0 $smallMargin;clear:both;border:1px solid $darkGrey;}
+	input[type="submit"]{@include yellowBtn (50px, 20px);}
+	input[type="submit"]:hover{background:$cyanColor;}
+	td{clear:both;width:100%;display: table;
+		p{margin:0;line-height: 1}
+	}
+	.req.true{float:left;color:$redColor;}
+
+}
+@media(max-width:767px){
+	.incentiveImg{
+		h2{text-align: center;} 
+		div{display: block;width:auto;margin:0 0 $smallMargin;}
+	}
+	div.responsive .volunteerSurvey, .volunteerSurvey {
+		input,select,textarea {max-width:300px;}
+	}
+}
+@media(max-width:567px){
+	div.responsive .volunteerSurvey, .volunteerSurvey {
+		input,select,textarea {max-width:235px;}
+	}
+}
+/*----------------------------
+SYSTEM PAGES
+-----------------------------*/
+#appAreaNoWidthClearFix{width:100%;
+	#login-div-content .banner-header{padding:0;margin:0;font-size:$mediumLarge;}
+	table{width:100%;}
+	.login-form p{margin:0;}
+	#login-div-content {
+		.outer-border{border:0 none;}
+		.input-border{padding: 10px; border-color:$secondaryColor;}
+	}
+	.footer-block{padding:0;background-color: transparent;border: 0 none;}	
+}
+@media(max-width: 767px){
+	#appAreaNoWidthClearFix	{
+		table td{display: table;width:100%;}
+		#login-div-content div.right-block{float:left;margin:$smallMargin 0;padding: 0}
+	}
+}
+/*-----------------------------
+JAINRAIN
+-------------------------------*/
+#shareLinkText{display:none;}
+.shareWrap{position:fixed;left:0;top:50%;}
+.janrainShareCountContainer{position:absolute;bottom:-29px;}
+.janrainSocialRoot.janrainOrientationHorizontal button.janrainProvider{margin-left:5px;}
+@media(max-width:1023px) {
+	.shareWrap{top:initial;bottom:0;left:0;right:0;background:$darkGrey;position: absolute;text-align:center;padding: 0 0 10px;}
+	#shareLinkText{display:block;color: #fff;font-family:$customFont;}
+	.janrainShareCountContainer{position:static;bottom:initial;}
+	.janrainSocialRoot .janrainShareForm{position: static;width: auto;margin:5px 0 0;}
+}
+.socialSignIn{margin:20px 0 0;width:100%;text-align:right;
+	.loginLinks{float:right;}
+	.janrain-provider-icon-16{margin:0 0 0 10px;}
+}
+#janrainModal{background-color:transparent !important;}
+#janrainModal span, #janrainModal p{line-height: inherit;font-size:inherit;}
+
+@import 'reusableComponents';
+@import 'masthead';
+@import 'components';
+@import 'footer';
+@import 'teamRaiserPages';
+@import 'regFlow';
+@import 'donation';
+@import 'android';
+@import 'lockupStyles';
+@import 'momentumStyles';
+@import 'diyStyles';
+@import 'golfStyles';
+

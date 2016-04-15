@@ -1,0 +1,33 @@
+/*OVERRIDES FOR ANDROID SPACING ISSUES WITH TTROUNDS FONT*/
+.android {
+  /*35px height btn*/
+  /*50px height btn*/
+  /*60px height btn*/
+}
+.android a.mastCta {
+  line-height: 60px;
+}
+.android .mobileShow.mastheadWrap.active .nav > li.ctaExpand a {
+  line-height: 80px;
+  height: 70px;
+}
+.android .mobileShow.mastheadWrap.active .nav > li.ctaExpand a.navbar-brand {
+  height: auto;
+  line-height: 1;
+}
+.android .btn, .android #login-div-content input.uc-button, .android #login-div-content button, .android #login-div-content .ft button, .android .btn-success, .android .navbar-form #login {
+  line-height: 45px;
+  height: 35px;
+}
+.android .btn.search {
+  height: 50px;
+  line-height: 1;
+}
+.android #logBtn, .android #logBtn:link, .android #login, .android input#donor_matching_employersearchBtn, .android div.responsive a.step-button, .android div.responsive button.step-button, .android div.responsive a#previous_step.step-button, .android div.responsive button#previous_step.step-button, .android div.responsive a#cancel_button.step-button, .android div.responsive button#cancel_button.step-button, .android div.responsive button#pstep_cancel.step-button, .android .Button, .android div#team_find_search_results_container div.list-component-cell-column-join-link a, .android div.responsive a#part_ctr_container, .android div.responsive a#part_ctr_container_step, .android .NextButton, .android .FinishButton, .android .CancelButton, .android #login-div-content input.uc-button, .android #login-div-content button, .android #login-div-content .ft button, .android .SmallButton, .android #personal_page_team_page_link, .android .utype div.responsive .step-button.next-step {
+  line-height: 60px;
+  height: 50px;
+}
+.android div.responsive #part_type_additional_gift_container .donation-level-row-label {
+  height: 60px;
+  line-height: 70px;
+}

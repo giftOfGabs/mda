@@ -1,0 +1,1142 @@
+/*Typography*/
+/*Layout*/
+/*brand colors*/
+*, p, ul, ol, li, ul li, ol li, strong, em, table, tr, th, td, span, a, .ObjTitle, input, button, h1, h2, h3, h4, textarea, select, option, label, div, .footer, p.cstmText, .list-value-container {
+  font-family: "Roboto", sans-serif, sans-serif;
+  font-size: 16px;
+  color: #888;
+  font-weight: normal;
+}
+
+select, input, textarea, button {
+  font-family: "Roboto", sans-serif;
+}
+
+.yui-skin-ux h1, .yui-skin-ux div.h1-imposter, .yui-skin-ux #content.yui-b h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  color: #485cc7;
+}
+.yui-skin-ux h2 {
+  font-size: 22px;
+  margin: 0 0 35px 0;
+  font-weight: bold;
+  color: #485cc7;
+}
+.yui-skin-ux h3 {
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  color: #888;
+}
+.yui-skin-ux p {
+  margin: 0 0 20px 0;
+  line-height: 30px;
+}
+.yui-skin-ux a, .yui-skin-ux a:link {
+  text-decoration: none;
+  color: #00b5e2;
+  font-size: inherit;
+}
+.yui-skin-ux a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.yui-skin-ux a span {
+  color: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+#msg_cat_team_page_shortcut_view, #msg_cat_personal_page_view_label, #msg_cat_team_page_shortcut_edit {
+  color: #00b5e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: transparent !important;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
+.yui-skin-ux #doc2, .yui-skin-ux .ux-main, .yui-skin-ux #hd {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0 none;
+}
+
+div.ux-main div.dashboard-bd {
+  width: 100%;
+  max-width: 1000px;
+  margin: 35px auto;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0 none;
+}
+
+.ux-block, .ux-block2 {
+  padding: 0;
+}
+
+#sidebar {
+  width: 20% !important;
+  float: right !important;
+}
+
+#yui-main {
+  width: 75% !important;
+}
+
+div.ux-main div#yui-main div#content {
+  border-color: #d7d7d7;
+}
+
+.yui-skin-ux #content.yui-b {
+  padding: 20px 2.5%;
+}
+
+@media (max-width: 1023px) {
+  div#yui-main {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  #sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin: 35px auto;
+    max-width: 300px;
+  }
+
+  div.ux-main div.dashboard-bd {
+    margin: 0;
+  }
+}
+.yui-skin-ux .ux-hd-row#hd-small {
+  margin-top: 5px;
+  overflow: hidden;
+  padding: 0;
+}
+.yui-skin-ux .ux-hd-row#hd-small h1 {
+  line-height: .5;
+  margin: 0;
+}
+.yui-skin-ux .ux-hd-row {
+  margin-top: 0;
+}
+.yui-skin-ux #hd-etc {
+  margin: 0 2.5% 10px 0;
+  padding: 0;
+}
+
+#hd-branding {
+  margin: 20px 0;
+  text-align: left;
+}
+
+@media (max-width: 1023px) {
+  .yui-skin-ux #hd-branding.ux-hd-row {
+    padding: 20px 2.5%;
+    width: 100%;
+  }
+  .yui-skin-ux .ux-hd-row {
+    padding: 0;
+    width: 100%;
+  }
+  .yui-skin-ux .ux-hd-row#hd-small {
+    padding: 0 2.5%;
+  }
+  .yui-skin-ux #hd-branding {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .yui-skin-ux .ux-hd-small div#hd-small-left, .yui-skin-ux .ux-hd-small div#hd-small-right {
+    float: none;
+  }
+  .yui-skin-ux .ux-hd-small div#hd-small-right {
+    margin: 10px 0 0;
+  }
+}
+.yui-skin-ux #hd-nav {
+  width: 100%;
+  display: block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  float: none;
+  max-width: 1000px;
+  clear: both;
+}
+.yui-skin-ux #hd-nav li {
+  list-style: none;
+  margin: 0 0 0 5%;
+  background: transparent;
+  padding: 0 1.7763%;
+}
+.yui-skin-ux #hd-nav li#dashboard-nav-link {
+  margin: 0;
+}
+.yui-skin-ux #hd-nav .selected {
+  background-color: #485cc7;
+  color: #fff;
+  text-decoration: none;
+  border: 0 none;
+  border-radius: 0;
+  margin: 0 0 0 5%;
+}
+.yui-skin-ux #hd-nav .selected a, .yui-skin-ux #hd-nav .selected a:link, .yui-skin-ux #hd-nav .selected a:visited {
+  color: #fff;
+}
+.yui-skin-ux #hd-nav a, .yui-skin-ux #hd-nav a:link, .yui-skin-ux #hd-nav a:visited, .yui-skin-ux #hd-nav a:link {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #485cc7;
+}
+
+.menu ul li {
+  padding: 0px;
+}
+
+.yui-panel-container.yui-dialog span.default button,
+.yui-skin-ux #hd-nav > li:hover a {
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .yui-skin-ux #hd-nav > li:hover {
+    background: none no-repeat scroll 0 0 #00b5e2;
+    text-decoration: none;
+    border: 0 none;
+    border-radius: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .yui-skin-ux #hd-nav {
+    background: #a4a4ae;
+  }
+
+  .yui-skin-ux #hd-nav > li {
+    width: 100%;
+    padding: 0 2.5%;
+    clear: both;
+    border: 1px solid #d7d7d7;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .yui-skin-ux #hd-nav .selected {
+    background-color: #485cc7;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .yui-skin-ux #hd-nav > li a.button {
+    padding: 10px;
+  }
+
+  .yui-skin-ux #hd-nav a, .yui-skin-ux #hd-nav a:link, .yui-skin-ux #hd-nav a:visited {
+    color: #fff;
+  }
+
+  .yui-skin-ux #hd-nav > li.selected a {
+    color: #fff;
+  }
+}
+.yui-skin-ux #sidebar h3 {
+  padding: 0;
+}
+.yui-skin-ux #sidebar ul.subnav {
+  margin: 0 0 35px;
+}
+.yui-skin-ux #sidebar ul.subnav li {
+  background: #a4a4ae;
+  border: 0 none;
+  padding: 0;
+}
+.yui-skin-ux #sidebar ul.subnav li.selected {
+  background: #485cc7 none repeat scroll 0% 0%;
+  filter: none;
+}
+.yui-skin-ux #sidebar ul.subnav li a {
+  display: block;
+  font-weight: bold;
+  color: #FFF;
+  font-weight: bold;
+  display: block;
+  background: transparent;
+  line-height: 50px;
+  padding: 0 0 0 5%;
+}
+.yui-skin-ux #sidebar ul.subnav li a:hover {
+  background: #00b5e2;
+}
+.yui-skin-ux #sidebar ul.subnav li.selected a:hover {
+  background: inherit;
+}
+
+div.dashboard-bd div#sidebar ul.subnav li {
+  border: 0 none;
+}
+
+.yui-skin-ux #sidebar.yui-b .side-block, .yui-skin-ux #sidebar .module {
+  border: 2px solid #f1b434;
+}
+
+/*NEXT STEPS*/
+#bd-what-next {
+  margin: 35px 0;
+}
+#bd-what-next .what-next-answer-item {
+  border: 2px solid #f1b434;
+  border-radius: 0;
+}
+#bd-what-next .what-next-answer-item.what-next-completed {
+  border: 2px solid #f1b434;
+}
+#bd-what-next .what-next-icon {
+  color: #485cc7;
+}
+#bd-what-next .what-next-type {
+  color: #485cc7;
+  font-weight: bold;
+}
+#bd-what-next .what-next-message-container {
+  width: auto;
+  max-width: 550px;
+}
+
+#bd-recent-activity .recent-activity-detail {
+  width: auto;
+}
+
+#bd-donation-history #donation_history .yui-dt-liner {
+  padding: .3em 1%;
+}
+
+/*---------------------
+EMAILS MODULE
+-----------------------*/
+.yui-skin-ux #email-compose-salutation {
+  padding: 0;
+}
+
+.yui-skin-ux #email-compose-templates {
+  padding: 0;
+  margin: 20px auto;
+}
+
+#email-wizard-contact-search {
+  margin: 10px 0 0;
+  padding: 2px 1%;
+  width: 98%;
+}
+
+#email-template-container h3 {
+  margin: 0;
+}
+
+span.yui-dt-label {
+  color: #fff;
+}
+
+/*progress meter in email tool*/
+#email-wizard-breadcrumb li span {
+  font-size: 16px;
+  color: #fff;
+}
+
+#email-wizard-breadcrumb li .email-wizard-status-indicator {
+  top: 0;
+}
+
+.track-progress li > span {
+  padding: 0px 5px 0px 30px;
+  color: #fff;
+}
+.track-progress li.email-wizard-nav-selected > span, .track-progress li.addressbookimport-wizard-nav-selected > span {
+  background-color: #485cc7;
+}
+.track-progress li {
+  background-color: #f1b434;
+}
+.track-progress li.email-wizard-nav-selected + li > span:before, .track-progress li.addressbookimport-wizard-nav-selected + li > span:before {
+  border-left-color: #485cc7;
+}
+.track-progress li > span:before {
+  border-left-color: #f1b434;
+}
+.track-progress li.email-wizard-nav-selected > span, .track-progress li.addressbookimport-wizard-nav-selected > span, .track-progress li.email-wizard-nav-selected:hover > span {
+  background-color: #485cc7;
+}
+.track-progress li.email-wizard-nav-selected + li > span:before, .track-progress li.addressbookimport-wizard-nav-selected + li > span:before, .track-progress li.email-wizard-nav-selected:hover + li > span:before {
+  border-left-color: #485cc7;
+}
+.track-progress li.email-wizard-nav-unselected:hover > span {
+  background: #00b5e2;
+}
+.track-progress li.email-wizard-nav-unselected:hover + li > span:before {
+  border-left-color: #00b5e2;
+}
+
+.yui-skin-ux {
+  /*accordion*/
+  /*Email Stationery select*/
+}
+.yui-skin-ux .ui-state-default, .yui-skin-ux .ui-widget-content .ui-state-default, .yui-skin-ux .ui-widget-header .ui-state-default, .yui-skin-ux .ui-state-active, .yui-skin-ux .ui-widget-content .ui-state-active, .yui-skin-ux .ui-widget-header .ui-state-active {
+  color: #fff;
+  background: none #a4a4ae;
+  border-radius: 0;
+}
+.yui-skin-ux .ui-state-active, .yui-skin-ux .ui-widget-content .ui-state-active, .yui-skin-ux .ui-widget-header .ui-state-active, .yui-skin-ux .ui-state-active.ui-state-default:hover {
+  background: #485cc7;
+  cursor: auto;
+}
+.yui-skin-ux .ui-state-default:hover {
+  background: #00b5e2;
+}
+.yui-skin-ux .ui-corner-bottom {
+  border-radius: 0;
+}
+.yui-skin-ux .ui-accordion .ui-accordion-header {
+  color: #fff;
+}
+.yui-skin-ux .ui-accordion-content {
+  border-color: #d7d7d7;
+}
+.yui-skin-ux .ui-accordion .ui-accordion-content {
+  margin: 0;
+}
+.yui-skin-ux #email-layout-selected {
+  margin: 10px;
+  padding: 0;
+  background: #fff;
+  outline: 0;
+  color: #888;
+}
+.yui-skin-ux #layout-block {
+  border: 0 none;
+}
+.yui-skin-ux #layout-block #layout-list {
+  background: #f2f2f2;
+}
+.yui-skin-ux #layout-list li.selected a {
+  border-color: #d7d7d7;
+  background: #485cc7;
+}
+.yui-skin-ux #layout-list li.selected a label {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .track-progress li {
+    display: block;
+    text-align: left;
+  }
+
+  .track-progress li > span:after, .track-progress li > span:before {
+    border: 0 none;
+  }
+
+  .track-progress li > span {
+    padding: 0 2.5%;
+  }
+
+  .track-progress li:last-child i {
+    display: none;
+  }
+
+  #email-wizard-breadcrumb li span {
+    font-size: 18px;
+  }
+
+  #email-compose-content-actions a {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  #email-compose-content-actions button {
+    width: 100%;
+    clear: both;
+    margin: 15px auto;
+    max-width: 300px;
+    padding: 0;
+  }
+
+  .email-wizard #email-compose-content-actions {
+    text-align: center;
+  }
+
+  /*#email-template-container h3{padding:10px $sidePad;}*/
+  .yui-skin-ux .compose-section-input-field #email-subject {
+    padding: .3em 0;
+  }
+
+  div#email-wizard-contacts button {
+    margin: 15px;
+  }
+
+  #email-wizard-recipients-table-header {
+    display: none;
+  }
+
+  .email-wizard #email-compose-top, .yui-skin-ux #layout-block {
+    max-width: 98%;
+  }
+
+  .yui-skin-ux #email-layout-selected {
+    max-width: 98%;
+  }
+}
+/*-----------------------------
+CONTACTS
+-------------------------------*/
+/*hide icons in contacts*/
+.ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary {
+  display: none;
+}
+
+#contacts-list-switch-tab div, #contacts-list-switch-tab div.right-tab, #contacts-list-switch-tab div.left-tab {
+  color: #fff;
+  background: #a4a4ae;
+  padding: 0;
+  width: 100px;
+  text-align: center;
+  border: 0 none;
+  border-radius: 0;
+}
+
+#contacts-list-switch-tab a {
+  color: #fff;
+  display: block;
+}
+
+#contacts-list-switch-tab div:hover {
+  background: #00b5e2;
+}
+
+#contacts-list-switch-tab div.selected, #contacts-list-switch-tab div.selected:hover {
+  background: #485cc7;
+}
+#contacts-list-switch-tab div.selected a, #contacts-list-switch-tab div.selected:hover a {
+  color: #fff;
+}
+
+.yui-skin-ux #msg_cat_contact_details_edit_info {
+  background: none;
+  color: #00b5e2;
+  padding: 0;
+}
+
+div#email-contacts-content div#contacts-actions a, div#email-contacts-content div#contacts-actions button, .yui-skin-ux #email-contacts-content td .email-address {
+  color: #00b5e2;
+  font-size: 16px;
+}
+
+div#email-contacts-content span#groups_menu_container button#groupsMenuButton-button, span#detailsGroupsMenuButton button#detailsGroupsMenuButton-button {
+  color: #00b5e2;
+}
+
+div#email-contacts-content div#contacts-actions a:hover {
+  color: #00b5e2;
+}
+
+div#email-contacts-content div#contacts-actions a:hover, div#email-contacts-content div#contacts-actions button:hover, .yui-skin-ux #email-contacts-content td .email-address:hover {
+  text-decoration: underline;
+}
+
+.track-progress li.text {
+  color: #fff;
+}
+
+.yui-skin-ux #msg_cat_contacts_send_message_button, .yui-skin-ux #msg_cat_contact_details_compose {
+  background-image: none;
+  padding: 0 5px;
+  margin: 0;
+  color: #00b5e2;
+}
+
+.yui-skin-ux #groups_menu_container, .yui-skin-ux span#detailsGroupsMenuButton {
+  background-image: none;
+}
+
+.yui-skin-ux .groups_menu_container .yui-button {
+  background-image: none;
+  padding: 0;
+}
+
+.yui-skin-ux .groups_menu_container .yui-button {
+  padding: 0 5px;
+}
+
+.yui-skin-ux .groups_menu_container, .yui-skin-ux .contacts-actions .button {
+  margin-right: 5px;
+}
+
+.yui-skin-ux #msg_cat_contacts_delete_button, .yui-skin-ux #msg_cat_sent_message_delete_label, .yui-skin-ux #msg_cat_contacts_email_all_button {
+  padding: 0 5px;
+  background-image: none;
+}
+
+.yui-skin-ux div .right-split {
+  width: 260px;
+}
+
+div#email-contacts-content div.search input#contacts-search-text {
+  max-width: 200px;
+  display: block;
+  float: left;
+}
+
+.yui-skin-ux #msg_cat_contacts_search_button {
+  color: #fff;
+  float: left;
+  display: block;
+}
+
+.yui-skin-ux div.primary-action .primary-action-shrinkwrap-container a, #contacts-list-switch-tab a.button {
+  background-color: inherit;
+  font-size: 14px;
+}
+
+.yui-skin-ux button#addressbookimport-selectsource-next.secondary {
+  display: inline-block;
+}
+
+.yui-skin-ux #contacts-list-groups table tr.filter-type {
+  border-color: #d7d7d7;
+}
+
+#contacts-list span, #addressbookimport-wizard-breadcrumb .text {
+  color: #fff;
+}
+
+#confirm_contacts_delete_dialog .yui-push-button button {
+  width: 150px;
+  display: inline-block;
+}
+
+.email-wizard-contacts-checkbox-header, .email-wizard-groups-checkbox-header, .email-wizard-contacts-checkbox, .email-wizard-groups-checkbox {
+  width: auto;
+}
+
+#search-filters {
+  padding: 0 5px;
+  max-width: 100%;
+  margin: 0 0 20px;
+  float: left;
+}
+
+div#addressbookimport-content a:link {
+  font-size: inherit;
+}
+
+#addressbookimport-importcandidatecontacts-list {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .yui-skin-ux div .right-split {
+    float: left;
+  }
+
+  #select-links {
+    clear: both;
+  }
+
+  .email-wizard-contact-picker {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+  }
+}
+/*-----------------------
+PERSONAL AND TEAM PAGES
+-------------------------*/
+.yui-skin-ux div.page-setting div.page-setting-detail {
+  width: 100%;
+}
+
+.yui-skin-ux .permalink_block {
+  background: #f2f2f2;
+  border-radius: 0;
+  border-color: #d7d7d7;
+}
+.yui-skin-ux .permalink_block p {
+  word-wrap: break-word;
+}
+
+.yui-skin-ux .media {
+  background: #f2f2f2;
+}
+
+#msg_cat_personal_video_url_save_button_label, #msg_cat_photo_upload_button_label {
+  padding: 0 2.5%;
+}
+
+@media (max-width: 1023px) {
+  .yui-skin-ux .media form {
+    margin: 0;
+    clear: both;
+  }
+
+  .caption input {
+    max-width: 300px;
+  }
+
+  .yui-skin-ux .media {
+    background: transparent;
+    padding: 1.5em 0;
+  }
+}
+@media (max-width: 480px) {
+  #personal_page_title, #company_page_title {
+    max-width: 100%;
+  }
+}
+.yui-skin-ux #content.yui-b #bd-teammates-block h1, .yui-skin-ux #content.yui-b #bd-donation-history h1 {
+  margin: 20px 0;
+}
+.yui-skin-ux .roster table {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0 0;
+}
+
+/*CUSTOM BADGES*/
+#cd_to_do_list .cd-what-next-type {
+  font-family: "Roboto", sans-serif, sans-serif;
+}
+
+#cd_overview *, #cd_badges * {
+  font-family: "Roboto", sans-serif, sans-serif;
+  color: #888;
+  font-size: 16px;
+}
+
+/*------------------
+FORMS
+-------------------*/
+@media (max-width: 567px) {
+  .yui-skin-ux #page-form p.form-field .width-label, .yui-skin-ux #page-form label {
+    text-align: left;
+    float: none;
+    display: block;
+    width: auto;
+    color: #888;
+  }
+  .yui-skin-ux #page-form #gift_display_personal_page, .yui-skin-ux #page-form .radio-section {
+    margin: 0;
+  }
+}
+/*--------------
+INPUTS
+----------------*/
+input[type="text"], div#email-contacts-content div.search input#contacts-search-text, #email-wizard-edit-contact-dialog #contactedit-dialog-form input {
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #d7d7d7;
+  padding: 0 5px;
+}
+
+/*----------------------
+POP UPS
+-----------------------*/
+/*make popups behave and not break responsive*/
+.yui-skin-ux .yui-panel {
+  width: 100% !important;
+  margin: auto;
+}
+
+.yui-skin-ux .yui-panel-container {
+  left: 9% !important;
+  right: 9% !important;
+  max-width: 600px;
+  padding: 0 1%;
+  margin: auto;
+}
+
+.ui-dialog {
+  max-width: 100%;
+}
+
+@media (max-width: 479px) {
+  #email-wizard-edit-contact-dialog #contactedit-dialog-form input {
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .ui-dialog #email-wizard-edit-contact-dialog #contactedit-dialog-form label {
+    text-align: center;
+    margin: 0;
+  }
+}
+/*-------------------
+LOADING BAR
+---------------------*/
+/*ADD LOGO TO POPULATE IN LOADING BAR
+#wait_c .bd {height:210px; background:url('https://secure3.convio.net/coh/images/content/pagebuilder/2015yogaForHope.png') no-repeat center 60px scroll transparent;}*/
+.ui-progressbar .ui-progressbar-value {
+  background-color: #485cc7 !important;
+  border-radius: 0 !important;
+}
+
+/*override jQuery ui css*/
+@media (max-width: 567px) {
+  #wait_c .bd {
+    height: auto;
+    background-image: none;
+  }
+}
+.yui-skin-ux a.button, .yui-button button, .yui-skin-ux button.primary, .yui-skin-ux .yui-push-button.default, .yui-skin-ux button, .yui-skin-ux .yui-push-button button, .yui-skin-ux div.primary-action a, .yui-skin-ux button.secondary {
+  font-size: 18px;
+  border-radius: 0;
+  padding: 0px 2.5%;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  border: 0 none;
+  filter: none;
+  min-height: 35px;
+  line-height: 35px;
+  background: none no-repeat scroll 0 0 #485cc7;
+  text-decoration: none;
+}
+
+.yui-skin-ux button:not([class^=janrain]):not(.email-wizard-recipients-actions-button) {
+  border-radius: 0;
+  padding: 0px 2.5%;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  border: 0 none;
+  filter: none;
+  min-height: 35px;
+  line-height: 35px;
+  background: none no-repeat scroll 0 0 #485cc7;
+  text-decoration: none;
+}
+
+.yui-skin-ux a.button:hover, .yui-button button:hover, .yui-skin-ux button.secondary:hover, .yui-skin-ux button:hover, .yui-skin-ux button.primary:hover, .yui-skin-ux .yui-push-button.default:hover, .yui-skin-ux .yui-push-button button:hover, .yui-skin-ux div.primary-action a:hover, .yui-skin-ux button.secondary:hover, .yui-skin-ux button:not([class^=janrain]):not(.email-wizard-recipients-actions-button):hover {
+  text-decoration: none;
+  cursor: pointer;
+  background: none no-repeat scroll 0 0 #00b5e2;
+  color: #fff;
+  font-weight: normal;
+}
+
+.sidebar-actions a, .sidebar-actions button, .yui-skin-ux .yui-panel .ft .yui-button.yui-push-button {
+  padding: 0;
+}
+
+.yui-skin-ux div.primary-action a {
+  width: 100%;
+}
+
+.yui-skin-ux .yui-push-button {
+  background: transparent;
+  padding: 0;
+  border: 0 none;
+}
+
+button span {
+  color: #fff;
+  margin: 0;
+  line-height: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.yui-skin-ux button.small {
+  display: inline-block;
+  font-weight: inherit;
+  line-height: 0;
+  font-size: 14px;
+}
+
+.ui-button .ui-button-text {
+  color: #fff;
+  line-height: 0;
+  margin: 0;
+}
+
+.yui-skin-ux div.primary-action {
+  width: 100%;
+  border: 0 none;
+  background: none 0 0 transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.yui-skin-ux div.primary-action a.message span, .yui-skin-ux div.primary-action a.money span {
+  background: none;
+  padding: 0;
+}
+
+.yui-skin-ux .yui-push-button.default button {
+  font-weight: normal;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-button .ui-button-text {
+  font-family: "Roboto", sans-serif;
+}
+
+.yui-skin-ux button.secondary {
+  font-weight: normal;
+}
+
+.yui-skin-ux button {
+  min-height: inherit;
+}
+
+/*override importants*/
+.yui-skin-ux button.primary, .yui-skin-ux .yui-push-button.default, .yui-panel-container.yui-dialog span.default button {
+  background: #485cc7 !important;
+  border: 0 none !important;
+  outline: 0 none;
+}
+
+.yui-skin-ux button.primary:hover, .yui-skin-ux .yui-push-button.default:hover, .yui-panel-container.yui-dialog span.default button:hover {
+  background-color: #00b5e2 !important;
+}
+
+.yui-skin-ux .yui-push-button.default button, .yui-panel-container.yui-dialog span button {
+  padding: 0 20px !important;
+}
+
+/*PROGRESS METER*/
+div.progress-bar-outer {
+  border-color: #d7d7d7;
+  background: none #fff;
+  border-radius: 0;
+}
+
+div.progress-bar-inner {
+  background: none #485cc7;
+  border-color: #485cc7;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.yui-skin-ux .big-block, .yui-skin-ux .tiny-block {
+  color: #888;
+}
+
+.yui-skin-ux .tiny-block span {
+  font-size: inherit;
+}
+
+.yui-skin-ux .fundraising-progress .section {
+  border: 4px solid #f1b434;
+  background: none #fff;
+}
+
+@media (max-width: 1023px) {
+  .fundraising-progress-bar-container, .team-fundraising-progress-bar-container {
+    display: none;
+  }
+}
+/*CUSTOM THERMS
+if using custom therm, add html to PC wrapper and hide default progress meter
+*/
+/*--------------------
+ TABLES
+-----------------------*/
+.yui-skin-ux .yui-dt table {
+  width: 100%;
+}
+.yui-skin-ux .yui-dt tr th, .yui-skin-ux .yui-dt tr td {
+  padding: 1%;
+  border-color: #d7d7d7;
+}
+.yui-skin-ux .yui-dt th, .yui-skin-ux .yui-dt tr th.yui-dt-first {
+  border-color: #d7d7d7;
+}
+.yui-skin-ux .yui-dt thead {
+  background: none #f1b434;
+}
+.yui-skin-ux .yui-dt .yui-dt-label, .yui-skin-ux .yui-dt .yui-dt-liner {
+  font-size: 14px;
+}
+.yui-skin-ux .yui-dt .yui-dt-liner {
+  padding: .2em 1%;
+}
+.yui-skin-ux .yui-dt thead th div span a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*Row backgrounds for tables*/
+#email-wizard-recipients-table tbody tr:nth-child(even), #email-wizard-contacts-table tbody tr:nth-child(even), #email-wizard-groups-table tbody tr:nth-child(even), .yui-skin-ux .yui-dt tr.yui-dt-odd, .yui-skin-ux tr.yui-dt-odd {
+  background-color: #f2f2f2;
+}
+
+/*Donation History Table*/
+.yui-skin-ux .yui-dt#donation_history colgroup col {
+  max-width: 25%;
+}
+.yui-skin-ux .yui-dt#donation_history colgroup col:nth-child(3) {
+  width: 0;
+}
+.yui-skin-ux .yui-dt#donation_history tr th, .yui-skin-ux .yui-dt#donation_history tr td {
+  max-width: 25%;
+}
+.yui-skin-ux .yui-dt#donation_history tr th:nth-child(3), .yui-skin-ux .yui-dt#donation_history tr td:nth-child(3) {
+  display: none;
+}
+
+/*Contact List Table*/
+.yui-skin-ux #email-contacts-content td .email-address {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.yui-skin-ux #contacts-table-info-block .full {
+  width: 100%;
+  float: left;
+}
+.yui-skin-ux #contacts-list-content-block .yui-dt td {
+  border-right-color: #d7d7d7;
+}
+.yui-skin-ux #contacts-list-content-block .yui-dt th, .yui-skin-ux #contacts-list-content-block .yui-dt td:first-child {
+  border-color: #d7d7d7;
+}
+.yui-skin-ux #contacts-list-content-block .yui-dt .yui-dt-col-group {
+  display: none;
+}
+.yui-skin-ux #contacts-list-content-block .yui-dt tr th, .yui-skin-ux #contacts-list-content-block .yui-dt tr td {
+  padding: 1%;
+}
+.yui-skin-ux .contact-list-name div {
+  width: auto;
+  text-align: left;
+}
+.yui-skin-ux #contacts-table-info-block #contacts-list .yui-dt-data td {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .yui-skin-ux .yui-dt table {
+    margin: auto;
+  }
+  .yui-skin-ux .yui-dt table th, .yui-skin-ux .yui-dt table td {
+    display: table-cell;
+  }
+
+  .yui-skin-ux .yui-dt-label, .yui-skin-ux .yui-dt-liner {
+    /*word-wrap:break-word;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .yui-skin-ux #contacts-table-info-block tr td.column-set-width {
+    min-width: 0;
+    width: auto;
+  }
+
+  /*Recipient Picker Email tables*/
+  #email-wizard-recipients-table-container, #email-wizard-contacts-table, #email-wizard-contacts-table-header, #email-wizard-groups-table, #email-wizard-groups-table-header, #email-wizard-contacts-table-header thead, #email-wizard-groups-table-header thead, .email-wizard-recipients-container, #email-wizard-contacts-table tbody, #email-wizard-groups-table tbody, #email-wizard-recipients-table, #email-wizard-recipients-table-header {
+    width: 100%;
+  }
+
+  #email-wizard-contacts-table td.email-wizard-contacts-email, #email-wizard-contacts-table td.email-wizard-contacts-name, .email-wizard-recipients-name-header, .email-wizard-recipients-name, #email-wizard-recipients-table .email-wizard-recipients-email {
+    width: auto;
+  }
+
+  /*Recent  Activity on Home View*/
+  .yui-skin-ux .yui-dt#bd-recent-activity-detail table {
+    table-layout: fixed;
+  }
+  .yui-skin-ux .yui-dt#bd-recent-activity-detail table th, .yui-skin-ux .yui-dt#bd-recent-activity-detail table td {
+    width: 33%;
+  }
+  .yui-skin-ux .yui-dt#bd-recent-activity-detail table th:last-child, .yui-skin-ux .yui-dt#bd-recent-activity-detail table td:last-child {
+    display: none;
+  }
+
+  /*Contact list*/
+  .yui-skin-ux .yui-dt#contacts-list table .yui-dt-col-clickThroughs {
+    display: none;
+  }
+}
+@media (max-width: 567px) {
+  .yui-skin-ux {
+    /*Contact list*/
+  }
+  .yui-skin-ux .yui-dt#donation_history table {
+    display: table-cell;
+  }
+  .yui-skin-ux .yui-dt#donation_history table tr th:nth-child(4), .yui-skin-ux .yui-dt#donation_history table tr td:nth-child(4) {
+    display: none;
+  }
+  .yui-skin-ux .yui-dt#drafts-block-inner table colgroup col, .yui-skin-ux .yui-dt#sent-messages-block-inner table colgroup col {
+    width: auto !important;
+  }
+  .yui-skin-ux .yui-dt#drafts-block-inner table td, .yui-skin-ux .yui-dt#drafts-block-inner table th, .yui-skin-ux .yui-dt#sent-messages-block-inner table td, .yui-skin-ux .yui-dt#sent-messages-block-inner table th {
+    max-width: 100px;
+  }
+  .yui-skin-ux .yui-dt#contacts-list table th, .yui-skin-ux .yui-dt#contacts-list table td, .yui-skin-ux .yui-dt#contacts-list .contact-list-name div {
+    max-width: 120px;
+  }
+  .yui-skin-ux .yui-dt#contacts-list .contact-list-icons {
+    display: none;
+  }
+  .yui-skin-ux #contacts-table-info-block #contacts-list-groups .yui-dt-first {
+    width: 20px;
+  }
+  .yui-skin-ux #contacts-table-info-block #group-list-content-block {
+    max-width: 175px;
+  }
+  .yui-skin-ux #contacts-table-info-block #group-list-content-block table {
+    width: 99%;
+  }
+  .yui-skin-ux #contacts-table-info-block .partial {
+    float: right;
+  }
+  .yui-skin-ux #contacts-table-info-block #contacts-list-groups .yui-dt-data .yui-dt21-col-filterName div {
+    width: auto;
+  }
+}
+@media (max-width: 479px) {
+  .yui-skin-ux .yui-dt#contacts-list .contact-list-name div, .yui-skin-ux .yui-dt#contacts-list table td, .yui-skin-ux .yui-dt#contacts-list table th {
+    max-width: 100px;
+  }
+}
+/*------------------
+WYSIWYG TABLES
+-------------------*/
+@media (max-width: 479px) {
+  .defaultSkin table.mceLayout {
+    max-width: 100%;
+  }
+  .defaultSkin table.mceLayout .mceToolbarRow1 tbody tr td:nth-child(9) {
+    display: none;
+  }
+  .defaultSkin table.mceLayout .mceToolbarRow2 tbody tr .mceLast {
+    display: none;
+  }
+  .defaultSkin table.mceLayout .mceToolbarRow2 tbody tr td:nth-child(15), .defaultSkin table.mceLayout .mceToolbarRow2 tbody tr td:nth-child(16) {
+    display: none;
+  }
+}

@@ -1,0 +1,195 @@
+@import 'variables';
+
+@mixin bgSize($type) {
+	-webkit-background-size: $type;
+  	-moz-background-size: $type;
+  	-o-background-size: $type;
+  	background-size: $type;
+}
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin circle($diameter) {
+	width: $diameter;
+	height:$diameter;
+	display: inline-block;
+	@include border-radius(50%);
+}
+@mixin heroScaleDown ($heightPad, $maxHeight) {
+	height: auto;
+	max-height: $maxHeight;
+	padding: $heightPad 0;
+}
+@mixin formFields ($height){
+	height:$height;
+	background-color:$ltGrey;
+	color:$darkGrey;
+	padding: 0 10px;
+	font-size:$fontBody;
+	border:0 none;
+	@include border-radius(0);
+	box-shadow: none;
+}
+@mixin textCut ($maxWidth){
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
+  	max-width: $maxWidth;
+  	display: block;
+}
+@mixin dashedBorder(){
+	border-bottom: 2px dashed $secondaryColor;
+}
+@mixin dashedBorderTop(){
+	border-top: 2px dashed $secondaryColor;
+}
+@mixin flexBox(){
+	display: -webkit-box;display: -ms-flexbox;display: -webkit-flex; display: flex;  
+}
+@mixin flex() {
+	 -webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;    
+}
+@mixin cover(){
+	-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;
+}
+/*-----------------------------------
+CIRCLES
+--------------------------------------*/
+@mixin circle($size) {
+	@include border-radius(50%);
+	width:$size;
+	height:$size;
+}
+
+
+
+/*-----------------------------------
+ARROWS
+--------------------------------------*/
+@mixin sideArrow ($direction, $long, $short, $color) {
+	width:0;
+	height:0;
+	border-top: $long solid transparent;
+	border-bottom: $long solid transparent;
+	@if $direction == 'right' {
+		border-right: $short solid $color;
+	} @else {
+		border-left: $short solid $color;
+	}
+}
+.arrowRight {@include sideArrow(left, 235px, 60px, $darkGrey);}
+.arrowLeft{@include sideArrow(right, 235px, 60px, $darkGrey);}
+
+@mixin triangleDown($width, $size, $color) {
+	width:0;
+	height:0;
+	margin:auto;
+	border-left: $width solid transparent;
+	border-right: $width solid transparent;
+	border-top: $size solid $color;
+}
+.triangleDown {@include triangleDown(115px, 35px, $ltGrey);}
+@media(max-width:767px){
+	.triangleDown{display: none;}
+}
+/*-----------------------------------
+TAGLINES
+--------------------------------------*/
+@mixin taglineSpan($padding) {
+	padding: $padding 0;
+	color: #fff;
+	font-size:$bigFont;
+	display: inline-block;
+	line-height:1;
+	font-family: $customFontBold;
+}
+/*--------------------------------------
+BUTTONS
+----------------------------------------*/
+@mixin yellowBtn ($height, $btnPad) {
+	color:#fff;
+	border:0 none;
+	background:$secondaryColor;
+	padding: 0 $btnPad;
+	line-height: $height;
+	text-align: center;
+	font-size:18px;
+	font-family: $customFontBold;
+	background-image:none;
+	filter:none;
+	@include border-radius(0);
+
+}
+@mixin customButton ($width, $maxWidth,$height) {
+	position: relative;
+	border: $borderWidth solid $secondaryColor;
+	border-bottom:0 none;
+	color:$darkGrey;
+	line-height: $height;
+	width: $width;
+	display: block;
+	text-align: center;
+	max-width:$maxWidth;
+	margin:auto;
+	text-transform: uppercase;
+	font-family: $customFontBold;
+	font-size: $mediumFont;
+}
+
+/*---------------------
+ANIMATE
+----------------------*/
+@keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+@mixin animateBounce($duration){
+	animation-name: bounce; 
+	transform-origin: center bottom;	
+	animation-duration: $duration;
+	animation-fill-mode: both;
+}
+@mixin animateSlideDown($duration){
+	animation-name: slideDown; 	
+	animation-duration: $duration;
+	animation-fill-mode: both;
+}
+

@@ -1,0 +1,304 @@
+/*-----------------------------------
+CIRCLES
+--------------------------------------*/
+/*-----------------------------------
+ARROWS
+--------------------------------------*/
+.arrowRight {
+  width: 0;
+  height: 0;
+  border-top: 235px solid transparent;
+  border-bottom: 235px solid transparent;
+  border-left: 60px solid #63666a;
+}
+
+.arrowLeft {
+  width: 0;
+  height: 0;
+  border-top: 235px solid transparent;
+  border-bottom: 235px solid transparent;
+  border-right: 60px solid #63666a;
+}
+
+.triangleDown {
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  border-top: 35px solid #f0f0f0;
+}
+
+@media (max-width: 767px) {
+  .triangleDown {
+    display: none;
+  }
+}
+/*-----------------------------------
+TAGLINES
+--------------------------------------*/
+/*--------------------------------------
+BUTTONS
+----------------------------------------*/
+/*---------------------
+ANIMATE
+----------------------*/
+@keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.donation .content {
+  margin: 35px auto;
+}
+.donation label span {
+  line-height: 0;
+}
+.donation #ProcessForm {
+  clear: both;
+  margin: 35px 0 0;
+}
+.donation p {
+  margin: 0;
+}
+.donation ul.ui-menu {
+  position: static;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.formMessage {
+  /*width:68%;*/
+  width: 100%;
+}
+
+div.button-container {
+  border: 0 none;
+}
+
+div.donation-form-container.responsive {
+  padding: 0;
+  border: 0 none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+div.donation-level-amount-container + div.donation-level-label-container {
+  display: none;
+}
+
+.don-standard-levels {
+  overflow: hidden;
+}
+
+div.don-level-total-row {
+  border-color: #485cc7;
+  margin: 0 0 20px;
+}
+
+#level_installmentduration_row {
+  clear: both;
+  margin: 20px 0;
+}
+
+div.donation-level-general-ask, div.html-caption-container {
+  max-width: 100%;
+}
+
+.section-header-container {
+  border-top: 2px dashed #f1b434;
+  margin: 35px 0 0;
+  padding: 35px 0;
+}
+
+#level_installmentduration_row label {
+  display: inline;
+  width: auto;
+  line-height: 50px;
+  margin: 0 10px 0 0;
+}
+
+#level_installmentduration_row .selectWrap {
+  width: auto;
+}
+
+.employer-address-container {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.employer-address-container .form-row:first-child, .employer-address-container .form-row:nth-child(2) {
+  display: none;
+}
+
+.employer-address-container .form-row {
+  float: left;
+  display: inline-block;
+  margin: 10px 2% 10px 0;
+  max-width: 100%;
+}
+
+div.form-row div.form-content > select, div.form-row div.form-content > input[type="text"], div.form-row div.form-content input.ui-autocomplete-input, div.form-row div.form-content > textarea, div.form-row div.form-content > button {
+  margin: 0;
+}
+
+div.responsive div.form-content#employer_state_row {
+  max-width: 400px;
+}
+
+.donation LABEL.FormLabel {
+  min-width: 0;
+  width: auto;
+}
+
+#billing_first_name_row, #billing_last_name_row, #donor_email_address_row, #donor_phone_row, #billing_addr_street1_row, #billing_addr_street2_row, #billing_addr_city_row, #billing_addr_state_row, #billing_addr_zip_row, #billing_addr_country_row, #responsive_payment_typecc_number_row, #responsive_payment_typecc_exp_date_row, #responsive_payment_typecc_cvv_row {
+  float: left;
+  display: inline-block;
+  margin: 10px 2% 10px 0;
+  max-width: 100%;
+}
+
+#donor_email_address_row, #billing_addr_city_row, #billing_addr_zip_row {
+  clear: left;
+}
+
+#donor_email_opt_in_Row {
+  clear: both;
+}
+
+.payment-type-element-container {
+  overflow: hidden;
+}
+
+.payment-type-element-container h3 {
+  display: none;
+}
+
+.donation .cardExpGroup .selectWrap {
+  width: 100px;
+  margin: 0 10px 0 0;
+}
+
+.levelMessage p {
+  display: none;
+}
+
+.levelMessage p.active {
+  display: block;
+}
+
+/*FORM BUTTONS*/
+.donation div.donation-level-container {
+  background: #485cc7;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border: 0 none;
+  float: left;
+  width: 150px;
+  height: 50px;
+  margin: 10px 2% 10px 0;
+  position: relative;
+}
+
+div.donation-level-container.active, .designated-giving-recurring-row.active {
+  background-color: #00b5e2;
+}
+
+div.donation-level-container:hover, .designated-giving-recurring-row:hover {
+  cursor: pointer;
+}
+
+div.form-row .donation-levels div.form-content {
+  margin: 0;
+}
+
+div.responsive .donation-levels .donation-level-input-container input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+div.donation-level-label-input-container input[type="radio"], div.donation-level-label-input-container {
+  display: none;
+}
+
+div.responsive .donation-levels .donation-level-input-container label {
+  clear: both;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 100%;
+}
+
+div.form-row .donation-levels div.form-content, div.form-row .donation-levels div.form-content div.donation-level-input-container {
+  width: 100%;
+  padding: 0;
+}
+
+div.donation-level-amount-container {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+div.donation-level-input-container {
+  line-height: 50px;
+}
+
+div.donation-level-container.enterAmt {
+  background: transparent;
+  width: 150px;
+  margin: 0;
+}
+
+div.donation-level-container.enterAmt div.donation-level-label-container {
+  display: none;
+}
+
+label + div.donation-level-user-entered {
+  margin: 0;
+}
+
+div.responsive div.donation-level-container.enterAmt input[type="text"] {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+}
+
+div.form-row.form-donation-level div.form-content {
+  display: block;
+}

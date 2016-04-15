@@ -1,0 +1,67 @@
+@import 'mixins';
+
+.momentum{
+	.navbar-nav li.dropdown .fa{width:50px;}
+	.navbar-nav li.nav-item{width:150px;}
+	.tagline img{max-width:70px;margin:-15px 0 0 15px;}
+	.featuredParticipant{background:url("../../../images/content/teamRaiser/momentumFeatureBkrd.png") no-repeat scroll 100% 0 transparent;@include cover();}
+	.eventFeature .featureHero{background-image:url('../../../images/content/teamRaiser/momentumAboutHero.jpg');}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/momentumHero.jpg');}
+	div#cons_info_component_container div#personal_info_section_two{width:auto;
+		.selectWrap{margin:0 0 $smallMargin;}
+	}
+	.tmEvents{
+		h2,h3{text-align:center;}
+		h2{max-width:525px;margin:0 auto $smallMargin;}
+		h3{font-size:$mediumLarge;font-family:$customFont;}
+		.customBtn{margin:$halfMargin auto 0;}
+	}
+	.tmEventsWrap{margin:0 0 $bigMargin;
+		.row{border-bottom:2px solid $secondaryColor;display: flex;margin:auto;}
+		a{display:inline-block;width:25%;text-align:center;flex:1;padding:$bigMargin 1.5%;
+			div{min-height:150px;position: relative;
+				img{position: absolute;top:0;bottom:0;left:0;right:0;margin:auto;}
+			}
+		}
+		p{font-family:$customFont; color:$darkGrey;
+			span{color:$cyanColor;}
+		}	
+	}
+}
+.momentum.splash{ 
+	h1{line-height: 1;margin:0 0 $smallMargin;}
+	p{line-height: 1.5}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/momentumHeroSplash.jpg');}
+	.tmEvents{margin: $bigMargin 0;}
+}
+.no-touch .momentum .tmEventsWrap a:hover{
+	text-decoration: none;background:  url('https://secure2.convio.net/mda/images/content/teamRaiser/arrowIcon.png?v=123') no-repeat 50% 25% $primaryColor;@include animateBounce(1s);
+			p{color:#fff;
+				span{color:#fff;}
+			}
+			img{visibility: hidden}
+}
+@media(max-width:1023px){
+	.momentum.splash .tmEventsWrap a{padding:$halfMargin 3%;}
+}
+@media(min-width:768px){
+	.momentum .eventFeature .aboutText{padding: $halfMargin 2.5% 0 0;max-height: 435px;}
+}
+@media(max-width:767px){
+	.momentum {
+		.featuredParticpant{background:none scroll 0 0 #fff;}
+	}
+	.momentum.splash .tmEventsWrap {
+		.row{border:0 none;display: block;margin:auto;}
+		a{display: block;width:auto;padding:$smallMargin 0;
+			div{min-height: 0;
+				img{position: static;}
+			}
+		}
+	}
+}
+@media(max-width:567px){
+	.momentum{
+		.tagline span{display: block;float:left;width:calc(100% - 55px);}
+	}
+}

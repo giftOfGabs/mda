@@ -1,0 +1,257 @@
+<script>
+    $(document).ready(function(){
+        //DEVICE DETECTION
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if(isAndroid) {
+            $('html').addClass('android');
+        }
+        //STYLING SELECTS
+        var selectArrow = '<span class="selectArrow"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span>';
+        $('select').wrap('<div class="selectWrap"></div>');
+        $(selectArrow).appendTo('.selectWrap'); 
+
+        [[?x9x::x[[S4]]x::
+            //SCRIPTS FOR MDA.ORG DONATION FORM
+            //adding container class to form elements, allowing for triangle element at top of form
+            $('#level_standard_row').addClass('container');
+            $('.section-header-container').addClass('container');
+            $('.donation-form-content > .form-row').addClass('container');
+            $('.payment-type-element-container').addClass('container');
+            $('.form-info-message').addClass('container');
+
+            //Making Circle Radio Buttons
+            $('.generic-repeat-label-checkbox-container').addClass('roundCheck');
+            $('#tribute_show_honor_fields_row > .form-content').addClass('roundCheck');
+            $('#donor_email_opt_in_Row .form-content').addClass('roundCheck');
+            $('#donor_email_opt_in_Row .check-box-form-label-text').text('Send me important news and updates');
+            $('#donor_email_opt_in_Row .check-box-form-label-text').appendTo('#donor_email_opt_in_Row');
+            $('#donor_remember_me_row .form-content').addClass('roundCheck');
+            var rememeberText = '<span>Remember Me</span>';
+            $(rememeberText).appendTo('#donor_remember_me_row');
+            $('#donor_remember_me_row').addClass('active');
+            $('#donor_email_opt_in_Row').addClass('active');
+            //CHANGE CIRCLES ONCLICK
+            $('#level_standardauto_repeatname').click(function(){
+                $('.donation-level-container-generic-repeat.form-input').toggleClass('active');
+            });
+            $('#tribute_show_honor_fieldsname').click(function(){
+                $('#tribute_show_honor_fields_row').toggleClass('active');
+            });
+            $('#donor_email_opt_inname').click(function(){
+                $('#donor_email_opt_in_Row').toggleClass('active');
+            });
+            $('#donor_remember_mename').click(function(){
+                $('#donor_remember_me_row').toggleClass('active');
+            });
+
+            //move fields into place
+            $('#billing_first_name_row').appendTo('.billingSection .left');
+            $('#billing_middle_name_row').appendTo('.billingSection .left');
+            $('#billing_last_name_row').appendTo('.billingSection .left');
+            $('#donor_email_address_row').appendTo('.billingSection .left');
+            $('#donor_phone_row').appendTo('.billingSection .left');
+            $('#donor_employer_row').appendTo('.billingSection .left');           
+            $('#billing_addr_street1_row').appendTo('.billingSection .right');
+            $('#billing_addr_street2_row').appendTo('.billingSection .right');
+            $('#billing_addr_city_row').appendTo('.billingSection .right');
+            $('#billing_addr_state_row').appendTo('.billingSection .right');
+            $('#billing_addr_zip_row').appendTo('.billingSection .right');
+            $('#billing_addr_country_row').appendTo('.billingSection .right');
+            
+            $('#donor_email_opt_in_Row').appendTo('.billingSection').addClass('left');
+            $('#donor_remember_me_row').appendTo('.billingSection').addClass('right');
+            var clearFix ='<div class="clear"></div>';
+            $(clearFix).appendTo('.billingSection');
+
+            $('#tribute_type_row').appendTo('.honorSection .left');
+            $('#tribute_honoree_first_name_row').appendTo('.honorSection .left');
+            $('#tribute_honoree_last_name_row').appendTo('.honorSection .left');
+            $('#tribute_notify_recip_name_row').appendTo('.honorSection .left');            
+            $('#tribute_notify_recip_street1_row').appendTo('.honorSection .right');
+            $('#tribute_notify_recip_street2_row').appendTo('.honorSection .right');
+            $('#tribute_notify_recip_city_row').appendTo('.honorSection .right');
+            $('#tribute_notify_recip_state_row').appendTo('.honorSection .right');
+            $('#tribute_notify_recip_zip_row').appendTo('.honorSection .right');
+            $('.custom-field-container').appendTo('.matchingGiftWrap');
+            var addText = '<span> and select from the list:</span>';
+            $(addText).appendTo('.matchingGiftWrap .form-input-label-block label');
+        
+            //set up honor gift and recurring gift sections
+            var levelsCheck = '<div class="levelsChecks container"><div class="clear"></div></div>';
+            $(levelsCheck).appendTo('.don-standard-levels.form-row');
+            $('.honorCaption').appendTo('#tribute_show_honor_fields_row');
+            $('#tribute_show_honor_fields_row').prependTo('.levelsChecks').addClass('right');
+            $('.donation-level-container-generic-repeat').prependTo('.levelsChecks').addClass('left');
+            $('.honorSection .form-row').show();
+            $('#tribute_show_honor_fieldsname').click(function(){
+                $('.honorSection').slideToggle();
+            });
+            var honorLabel = '<span>Make this an honor or memorial gift</span>';
+            $(honorLabel).insertAfter('#tribute_show_honor_fields_row .roundCheck');
+            var msgTxt = $('.generic-repeat-label-checkbox-container label').text();
+            var monthlyMsg = '<span>'+msgTxt+'</span>';
+            $('.donation-level-container-generic-repeat').append(monthlyMsg);
+                             
+            
+            //Donation Levels
+            var amountLevel = readCookie('level')
+            $('.donation-level-container:last-child').addClass('enterAmt'); 
+            $('.enterAmt .donation-level-user-entered input').attr('placeholder','Enter An Amount');
+            var donateSpan = '<span class="donation-level-total-amount"></span>';
+            $('.donation-level-container').each(function(i){
+                $(this).addClass('level'+i);
+                i++;
+            });        
+            $('.donation-level-container').click(function(){
+                $('.donation-level-container').removeClass('active');
+                $('.formMessage p').removeClass('active');
+                if($(this).hasClass('level0')){
+                    var level = 'level0';
+                }else if ($(this).hasClass('level1')){
+                    var level = 'level1';
+                }else if ($(this).hasClass('level2')){
+                    var level = 'level2';
+                }else if ($(this).hasClass('level3')){
+                    var level = 'level3';
+                }else if ($(this).hasClass('level4')){
+                    var level = 'level4';
+                }
+                document.cookie="level="+level;
+                $(this).addClass('active');
+                var amt = $(this).find('.donation-level-amount-container').text();
+                //$('.donateSubmit').text('Donate '+amt);        
+                if($('.donation-level-container.active').hasClass('level0')) {
+                    $('.formMessage .level0').addClass('active');
+                }else if ($('.donation-level-container.active').hasClass('level1')) {
+                    $('.formMessage .level1').addClass('active');
+                }else if ($('.donation-level-container.active').hasClass('level2')) {
+                    $('.formMessage .level2').addClass('active');
+                }else if ($('.donation-level-container.active').hasClass('level3')) {
+                    $('.formMessage .level3').addClass('active');
+                }else if ($('.donation-level-container.active').hasClass('level4')) {
+                    $('.formMessage .level4').addClass('active');
+                }            
+            }); 
+    
+            //make sure to remember values on reload
+            if(amountLevel == 'level0') {
+                $('.level0').addClass('active');
+                $('.level0 .donation-level-label-input-container input').click();
+            }else if (amountLevel == 'level1') {
+                $('.level1').addClass('active');
+                $('.level1 .donation-level-label-input-container input').click();
+            }else if (amountLevel == 'level2') {
+                $('.level2').addClass('active');
+                $('.level2 .donation-level-label-input-container input').click();
+            }else if (amountLevel == 'level3') {
+                $('.level3').addClass('active');
+                $('.level3 .donation-level-label-input-container input').click();
+            }else if (amountLevel == 'level4') {
+                $('.level4').addClass('active');
+                $('.level4 .donation-level-label-input-container input').click();
+            }  
+            $('.donateSubmit').click(function(){
+                $('#pstep_finish').click();
+            });
+
+            [[?x7749x::x[[S334:df_id]]x::
+                //populate amount based on querystring for jerry lewis bday form
+                [[?x20x::x[[S334:levelAmt]]x::
+                    jQuery('.level0 label').click();
+                ::
+                ]]
+                [[?x60x::x[[S334:levelAmt]]x::
+                    jQuery('.level1 label').click();
+                ::
+                ]]
+                [[?x90x::x[[S334:levelAmt]]x::
+                    jQuery('.level2 label').click();
+                ::
+                ]]
+                [[?x120x::x[[S334:levelAmt]]x::
+                    jQuery('.level3 label').click();
+                ::
+                ]]
+            ::]]
+        ::
+        ]]
+
+    });
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+</script>
+[[?x9x::x[[S4]]x::
+<!--DONATE DOUBLE CODE - SLIGHT VARIATION FROM reus_donate_double - moving dropdown into form as static element-->
+<link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script>
+Y.use("jquery", function(Y) {
+    jQuery(document).ready(function() {
+        [[?[[S8]]::donation=completed::
+            [[?xx::x[[S120:dc:custom:custom_string15]]x::
+            ::
+                jQuery.ajax({
+                    type: "POST",
+                    url: "https://donatedouble.org/donate_api.php",
+                    data: { api_key:"KDO4HIOPpkkCCCQFFqycc3tsSTD",json: '{"action":"update","type":"donation","data":{"donationamount":"[[S120:dc:giftAmount]]","firstname":"[[S120:dc:donorFirstName]]","lastname":"[[S120:dc:donorLastName]]","street1":"[[S120:dc:donorStreet1]]","street2":"[[S120:dc:donorStreet2]]","city":"[[S120:dc:donorCity]]","state":"[[S120:dc:donorState]]","zip":"[[S120:dc:donorZip]]","country":"[[S120:dc:donorCountry]]","phone":"[[S120:dc:phone]]","email":"[[S120:dc:email]]","company":"[[S120:dc:custom:custom_string15]]","npo_id":"13-1665552"}}'},
+                    success: function(data) {
+                        console.log(data);
+                    }
+                }); 
+            ]]
+
+        ::            
+            jQuery.ajax({
+                type: "POST",
+                url: "https://donatedouble.org/donate_api.php",
+                data: { api_key:"KDO4HIOPpkkCCCQFFqycc3tsSTD",json: '{"action":"read","type":"companies"}'},
+                success: function(data){
+                    jQuery('#donatedouble_select_menu_dropdown').empty();
+                    jQuery.each(data.companies, function(i, value) {
+                        jQuery('#donatedouble_select_menu_dropdown').append(jQuery('<option>').text(value).attr('value', i));
+
+                        [[?x7848x::x[[S334:df_id]]x::
+                            jQuery('#employerDropDown select').append(jQuery('<option>').text(value).attr('value', i));                        ::
+                        ]]
+                    });
+                    jQuery("#donatedouble_text_field_input").autocomplete({
+                        source: data.companies
+                    });
+                    //move Donate Double Componenet
+                    jQuery('ul.ui-menu').appendTo('.matchingGiftWrap');
+                }
+            });
+
+            //testing new donate doubhle features on test form  National mda.org form - DEV COPY 
+            [[?x7848x::x[[S334:df_id]]x::
+                var newDropdown = '<div id="employerDropDown" class="form-row container"><label class="formLabel" for="employerDrop">Select your employer from the Dropwdown:</label><div class="selectWrap"><select name="employerDrop"><option></option></select><span class="selectArrow"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span></div></div><br /><br />';
+                var typeIn = 'Or <a id="typeEmp" href="javascript:void(0);">click here</a> to type in your employer';
+
+                jQuery('.matchingGiftWrap .custom-field-container label').html(typeIn);
+                jQuery('#donatedouble_text_field_input').addClass('hidden');
+                jQuery('a#typeEmp').click(function(){
+                    jQuery('#donatedouble_text_field_input').removeClass('hidden');
+                });
+
+                jQuery(newDropdown).insertAfter('.matchingGiftWrap h2');
+                jQuery('#donatedouble_text_field_input').val('');
+                jQuery('#employerDropDown select').change(function(){
+                    var emp = $('#employerDropDown select option:selected').text();
+                    jQuery('#donatedouble_text_field_input').val(emp);
+                });
+
+            ::
+            ]]
+        ]]
+    });
+});
+</script>
+::]]

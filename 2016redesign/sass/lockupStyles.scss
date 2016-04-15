@@ -1,0 +1,53 @@
+@import 'mixins';
+
+.lockup{
+	.navbar-nav li.dropdown .fa{width:50px;}
+	.navbar-nav li.nav-item{width:150px;}
+	.navbar-nav li.nav-item.extraBtn{width:210px;}
+	.regSurvey {		
+		padding:$smallMargin;background:$ltGrey;margin: 0 0 $halfMargin;
+		table{margin:0 auto ;}
+		.form-content{margin:0 0 20px;}
+		label{font-weight:normal;font-size:$fontBody;margin-bottom:0;@include border-radius(0);white-space: inherit}
+		input[type="text"]{@include formFields(50px);width:100%;border: 1px solid #ccc;margin:0 0 $smallMargin;}
+	}
+	.tagline img{max-width:45px;}
+	.featuredParticipant{background:url("../../../images/content/teamRaiser/lockupFeatureBkrd.png") no-repeat scroll 100% 0 transparent;@include cover();}
+	
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/lockupHero.jpg');background-position-y:95%;}
+	div#cons_info_component_container div#personal_info_section_two{width:auto;}
+	
+}
+
+.lockup.splash{
+	h1{line-height: 1;margin:0 0 $smallMargin;}
+	p{line-height: 1.5}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/lockUpHeroSplash.jpg');background-position-y:0px;}
+	.eventFeature .featureHero{background-image:url('../../../images/content/teamRaiser/lockupAboutHero.jpg');width:50%;}
+	.eventFeature .aboutText{width:45%; padding-top:$smallMargin;}
+}
+@media(max-width:1023px){
+	.lockup {
+		.navbar-nav li.nav-item{width:135px;}
+		.navbar-nav li.nav-item.extraBtn{width:200px;}
+		
+	}
+	.lockup.splash{
+		.eventFeature .aboutText{width:55%; padding:$smallMargin 0 0 0;}
+		.eventFeature .featureHero{width:44%;background-position-x:50%;}
+	}
+}
+@media(max-width:767px){
+	.lockup {
+		.featuredParticpant{background:none scroll 0 0 #fff;}
+		.eventFeature {
+			.aboutText, .featureHero{width:100%;}
+			.aboutText{padding:0;}
+		}
+	}
+}
+@media(max-width:567px){
+	.lockup{
+		.tagline span{display: block;float:left;width:calc(100% - 55px);}
+	}
+}

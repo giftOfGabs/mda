@@ -1,0 +1,152 @@
+[[?x[[S42:0:fr_id]]x::xx::::[[U0:evID=[[S42:0:fr_id]]]]]]
+[[?x[[S334:fr_id]]x::xx::::[[U0:evID=[[S334:fr_id]]]]]]
+[[?x[[S334:FR_ID]]x::xx::::[[U0:evID=[[S334:FR_ID]]]]]]
+[[?[[S80:trID]]::null::::[[U0:evID=[[S80:trID]]]]]]
+<div class="frontContent">
+    <div class="nextStepsWrap">
+        <div class="tagline steps">
+            <div class="container">
+                <h1>Next Steps</h1>
+            </div>
+        </div>
+        <div class="what-next-answer-item [[?[[E48:[[S80:evID]]:if-is-self-donor]]::TRUE::what-next-completed::what-next-uncompleted]]">
+            <div class="container">
+                <div class="what-next-icon">[[?[[E48:[[S80:evID]]:if-is-self-donor]]::TRUE::<i class="fa fa-check"></i>::<span class="number">1</span><i class="fa fa-arrow-right"></i>]]</div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">
+                        Make a Self Donation
+                    </div>
+                    <div class="what-next-message">
+                        Donate toward your own goal to boost your fundraising campaign!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="what-next-answer-item [[?[[E48:[[S80:evID]]:if-page-updated]]::TRUE::what-next-completed::what-next-uncompleted]]" onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','compose')">
+            <div class="container">
+                <div class="what-next-icon">[[?[[E48:[[S80:evID]]:if-page-updated]]::TRUE::<i class="fa fa-check"></i>::<span class="number">2</span><i class="fa fa-arrow-right"></i>]]</div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">
+                        Update your Personal Page
+                    </div>
+                    <div class="what-next-message">
+                        Customize your Personal Page with a story about why you are raising funds for this cause
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="what-next-answer-item [[?[[S45:1111]]::TRUE::what-next-completed::what-next-uncompleted]]" href="http://www2.mda.org/site/PageNavigator/musclewalk_apps.html" target="_blank">
+            <div class="container">
+                <div class="what-next-icon">[[?[[S45:1111]]::TRUE::<i class="fa fa-check"></i>::<span class="number">3</span><i class="fa fa-arrow-right"></i>]]</div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">Go Mobile</div>
+                    <div class="what-next-message">Use our Boundless Fundraising app to supercharge outreach across all your networks.</div>
+                </div>
+            </div>
+        </a>
+        <div class="what-next-answer-item [[?[[E48:[[S80:evID]]:if-emails-gt:0]]::TRUE::what-next-completed::what-next-uncompleted]]" onclick="loadComposeViewWithTemplate(EMAIL_TEMPLATE_TYPE_COMPOSE)" id="what-next-selected-item">
+            <div class="container">
+                <div class="what-next-icon">[[?[[E48:[[S80:evID]]:if-emails-gt:0]]::TRUE::<i class="fa fa-check"></i>::<span class="number">4</span><i class="fa fa-arrow-right"></i>]]</div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">Send an Email</div>
+                    <div class="what-next-message">Send a direct message to your address book to tell your friends and family about your fundraising</div>
+                </div>
+            </div>
+        </div>
+        <a class="what-next-answer-item [[?[[S45:1111]]::TRUE::what-next-completed::what-next-uncompleted]]" href="http://www2.mda.org/site/PageNavigator/musclewalk_apps.html" target="_blank">
+            <div class="container">
+                <div class="what-next-icon">[[?[[S45:1111]]::TRUE::<i class="fa fa-check"></i>::<span class="number">5</span><i class="fa fa-arrow-right"></i>]]</div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">Get the Facebook App</div>
+                    <div class="what-next-message">Use our Facebook app to increase outreach across all your networks.</div>
+                </div>
+            </div>
+        </a>
+        <div class="what-next-answer-item what-next-uncompleted" onclick="showGoalEdit()">
+            <div class="container">
+                <div class="what-next-icon"><span class="number">6</span><i class="fa fa-arrow-right"></i></div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">Update Your Goal</div>
+                    <div class="what-next-message">Met your fundraising goal, why stop there? Adjust your numbers and keep going!</div>
+                </div>
+            </div>
+        </div>
+        <a class="what-next-answer-item what-next-uncompleted" href="http://www2.mda.org/site/PageNavigator/musclewalk_apps.html" target="_blank">
+            <div class="container">
+                <div class="what-next-icon"><span class="number">7</span><i class="fa fa-arrow-right"></i></div>
+                <div class="what-next-message-container">
+                    <div class="what-next-type">Install the Email Badge</div>
+                    <div class="what-next-message">Use our Email Badge to increase outreach across all your networks.</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="badges container">
+        <h3>Achievements</h3>
+        <p>As you fundraise toward your goal, you&#8217;ll earn badges to reward your progress. Earn them all and share your achievements!</p>
+        <div class="badge">
+            [[?[[E48:[[S80:evID]]:if-page-updated]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-updatePage-full.png" alt="You have updated your page" />
+                <span class="unlocked">You're a <br />Storyteller</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-updatePage-emtpy.png" alt="You have not updated your page" />
+                <span class="locked">Tell Your <br />Story</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E48:[[S80:evID]]:if-emails-gt:0]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-email-full.png" alt="You have sent an email" />
+                <span class="unlocked">You're an <br />Email Pro</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-email-empty.png" alt="You have not sent an email" />
+                <span class="locked">Send an <br />Email</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E45:1111]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-fbApp-full.png" alt="You have downloaded the Facebook App" />
+                <span class="unlocked">You Got the <br />Facebook App</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-fbApp-empty.png" alt="You have not downloaded the Facebook App" />
+                <span class="locked">Get the <br />Facebook App</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E48:[[S80:evID]]:if-is-self-donor]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-selfDonor-full.png" alt="You are a self Donor" />
+                <span class="unlocked">You <br />Donated</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-selfDonor-empty.png" alt="You are not a self donor" />
+                <span class="locked">Donate <br />Personally</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E45:1111]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-mobileApp-full.png" alt="You have downloaded the Mobile App" />
+                <span class="unlocked">You Got the <br />Mobile App</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-mobileApp-emtpy.png" alt="You have not downloaded the Mobile App" />
+                <span class="locked">Get the <br />Mobile App</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E48:[[S80:evID]]:if-percent-gt:49]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-halfGoal-full.png" alt="You have reached half your goal" />
+                <span class="unlocked">You Met Half<br />Your Goal</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-halfGoal-empty.png" alt="You have not reached half your goal" />
+                <span class="locked">Meet Half <br />Your Goal</span>
+            ]]        
+        </div>
+        <div class="badge">
+            [[?[[E48:[[S80:evID]]:if-percent-gt:99]]::TRUE::
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-goalMet-full.png" alt="You have reached your goal" />
+                <span class="unlocked">You Met <br />Your Goal</span>
+            ::  
+                <img src="https://secure2.convio.net/mda/images/content/teamRaiser/badges-goalMet-empty.png" alt="You have not reached your goal" />
+                <span class="locked">Meet Your <br />Full Goal</span>
+            ]]        
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

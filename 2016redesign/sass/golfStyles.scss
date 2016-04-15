@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.golf{
+	.tagline img{max-width:45px;}
+	.featuredParticipant{background:url("../../../images/content/teamRaiser/genFeatureBkrd.png") no-repeat scroll 100% 0 transparent;@include cover();}
+	.eventFeature .featureHero{background-image:url('../../../images/content/teamRaiser/golfAboutHero.jpg');}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/golfHeroPlain.jpg');}
+	
+}
+
+.golf.splash{ 
+	h1{line-height: 1;margin:0 0 $smallMargin;}
+	p{line-height: 1.5}
+	.jumbotron{background-image:url('../../../images/content/teamRaiser/golfHero.jpg');}
+}
+
+@media(max-width:767px){
+	.golf {
+		.featuredParticpant{background:none scroll 0 0 #fff;}
+	}
+}
+@media(max-width:567px){
+	.golf{
+		.tagline span{display: block;float:left;width:calc(100% - 55px);}
+	}
+}

@@ -1,0 +1,124 @@
+@import 'mixins';
+/*----------------------------------
+MASTHEAD
+------------------------------------*/
+.navbar-brand{height:auto;padding:0;width: 175px;position: absolute;
+	img{margin:23px 0;}
+}
+.navbar-static-top{margin:0;min-height: 0;
+	form{background-color: $primaryColor;margin:0;
+		.container{text-align:right;padding:12.5px 0;
+			button{margin: 0 0 0 15px;}
+			.form-control{height: 35px;font-size:14px;}			
+			.forgotPass{margin:0 15px;}
+			a{color:#fff;text-decoration: none;text-transform: none;font-size:14px;font-family: $customFontBold;}
+			a:hover{text-decoration: underline}
+		}
+	}	
+}
+.loginForm.right{text-transform: uppercase;font-size:12px;text-decoration: none;}
+.mastheadActions { 
+	.loggedIn{margin:$halfMargin 0 25px;max-width:535px;text-align: right;
+		p{line-height:1;margin:0;}
+		a{display: inline-block;margin:0 0 0 15px;font-size:16px;text-transform:uppercase;}
+	}	
+	.logInForm{line-height: 75px;
+		span{font-size: inherit;}
+	}
+}
+.splash .navbar-nav li.dropdown .dropdown-menu{height:500px;}
+
+.navbar{border:0 none;}
+.navbar-nav {
+	float:right;position:relative;bottom:0;right:0;font-family: $customFontBold;
+	li.nav-item{width:165px;background:$primaryColor;text-align:center;margin: 0 0 0 5px;
+		a{color:#fff;line-height: 50px;padding:0;display: block;font-size:20px;text-decoration: none;font-family: $customFontBold;}
+		a:hover{background: $cyanColor}
+		a:focus{background:inherit;}
+	}
+	li.nav-item:first-child{margin:0;}
+	li.dropdown{background:transparent;position: static;text-align: center; margin: 0 0 0 5px;
+		.fa{font-size:35px;vertical-align: middle; width:65px;line-height: 50px;}
+		a{padding:0;color:$primaryColor;background:transparent;font-family: $customFontBold;display: inline-block;}
+		a:hover{background: transparent;color:$cyanColor;}
+		.dropdown-menu{text-align:right;background-color:$greyColor;width:100%;@include border-radius(0);padding:20px 0; border: 0 none; box-shadow:none;
+			li{display: block;
+				a{color:#fff;text-decoration:none;display: block;padding:10px 20px 10px 0;margin:0 0 10px;width:100%;}
+			}
+			li:hover{background:$darkGrey;
+				a{color:$secondaryColor;}
+			}
+		}				
+	}
+	li.dropdown.active{background:$cyanColor;color:#fff;
+		a{color:#fff;}
+	}
+}
+.registration .navbar-nav, .donation .navbar-nav{visibility:hidden;}
+.donation.thankYou .navbar-nav, .registration.rthanks{visibility:visible;}
+
+@media(max-width: 1050px) {
+	.splash .navbar-nav li.dropdown .dropdown-menu{height:auto;}
+}
+@media(max-width:767px) {
+	.navbar-static-top {
+		form.navbar-form{padding:0;
+			.container{padding:$smallMargin 4%;margin:0 0 $halfMargin;
+				a{font-size:16px;}
+				a:hover{text-decoration: none;}
+				.mobileShow{display: block;margin:0 0 15px;
+				}
+				.form-group{margin:0 0 10px;}
+			}
+			.container > a{position: absolute;left:4%;bottom:$smallMargin;}
+			.container > a.forgotPass{bottom: 50px;margin:0;}
+		}
+	}
+	.loggedIn{background:$primaryColor;padding:10px 5%;
+		a{font-family: $customFontBold}
+		p{clear:both;text-align:right;margin:0;font-family: $customFont;}
+		span{font-size:20px;margin:0 1.5%;}
+		a,p {font-size:16px;color:#fff;}
+	}
+	.nav > li.ctaExpand{display: none;background:$primaryColor;}
+	.mastheadWrap{display: none;}
+	.mobileShow.mastheadWrap{display:block;overflow: hidden;
+		.original{display:block;}
+		.transparent{margin:auto;max-width:100%;}
+		.transparent, .fa-close{display: none}
+		.navbar-brand{max-width:200px;padding:0 0 0 4%;position: static;}
+		.navbar-nav{margin:0;}
+		.logInForm.right{line-height: 50px;}
+	}
+	.mobileShow.mastheadWrap.active {background-color: $primaryColor;
+		.original{display:none;}
+		.transparent, .fa-close{display: block}
+		.fa-close{color:#fff;}
+		a.mastCta{border-top:1px solid #fff;}
+		.mastCta, .fa-bars, .logInForm.right{display: none;}
+		.nav > li.ctaExpand{display: block;float: left;width:50%;
+			a{width:100%;font-size: 20px;font-family:$customFontBold;text-transform: uppercase;text-align: center;line-height: $bigMargin;border-top:1px solid #fff;color:#fff;background:transparent;padding:0;clear:both;}
+			a:hover, a:visited{color:#fff;background-color: transparent;}
+			a.navbar-brand{border:0 none;max-width:none;padding:20px;}
+		}
+		.navbar-nav{width:100%;background-color: transparent;@include flexBox(); background-color: $primaryColor;
+			li.dropdown{margin:0;width:50%;background-color: $greyColor;
+				.nav-link{float:right;margin: 0 0 20px;}
+				.dropdown-menu{padding:0;position: static;max-height: none;display: block;clear:both;
+					a{float:none;color:#fff;font-size:16px;padding: 10px 0 10px 10px;margin:0;width:90%;white-space: normal;word-break:break-word}
+				}
+			}
+		}
+		.navbar-nav>li{@include flex();float: left}
+	}
+	a.mastCta{display: inline-block;width:50%;color:#fff;background:$primaryColor;font-size: $mediumFont;line-height: 50px;height:50px;clear:left;float: left;text-align: center;font-family:$customFontBold;text-transform: uppercase;border:0 none;padding:0;border:0 none;}
+	a.mastCta:last-child{clear:none;border-left:1px solid #fff;}
+	a.mastCta:hover{text-decoration:none;}	
+	.registration a.mastCta{display:none;}
+	.socialSignIn{margin:20px 0;}
+}
+@media(max-width:567px) {
+	a.mastCta{width:100%;clear:both;border-bottom:1px solid #fff;float: none}
+	a.mastCta:last-child{border-left:0 none;clear:both;}
+	.mobileShow.mastheadWrap.active .nav>li.ctaExpand a{line-height: 80px;}
+}

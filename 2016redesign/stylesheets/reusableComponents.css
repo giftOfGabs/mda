@@ -1,0 +1,586 @@
+/*-----------------------------------
+CIRCLES
+--------------------------------------*/
+/*-----------------------------------
+ARROWS
+--------------------------------------*/
+.arrowRight {
+  width: 0;
+  height: 0;
+  border-top: 235px solid transparent;
+  border-bottom: 235px solid transparent;
+  border-left: 60px solid #63666a;
+}
+
+.arrowLeft {
+  width: 0;
+  height: 0;
+  border-top: 235px solid transparent;
+  border-bottom: 235px solid transparent;
+  border-right: 60px solid #63666a;
+}
+
+.triangleDown {
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  border-top: 35px solid #f0f0f0;
+}
+
+@media (max-width: 767px) {
+  .triangleDown {
+    display: none;
+  }
+}
+/*-----------------------------------
+TAGLINES
+--------------------------------------*/
+/*--------------------------------------
+BUTTONS
+----------------------------------------*/
+/*---------------------
+ANIMATE
+----------------------*/
+@keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+/*-----------------------------------
+FORMS
+------------------------------------*/
+.form-control {
+  height: 50px;
+  background-color: #f0f0f0;
+  color: #63666a;
+  padding: 0 10px;
+  font-size: 18px;
+  border: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.eventSearch {
+  max-width: 650px;
+  margin: 70px auto 10px;
+}
+.eventSearch span {
+  font-size: 30px;
+  color: #485cc7;
+  font-family: TTRounds-Bold;
+  display: inline-block;
+  float: left;
+  line-height: 1.2;
+}
+.eventSearch #zipInputContainer {
+  display: inline-block;
+  float: right;
+}
+.eventSearch .form-control {
+  float: left;
+  width: 200px;
+}
+.eventSearch .btn {
+  width: 60px;
+  background: #485cc7;
+  color: #fff;
+  height: 50px;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+.eventSearch .btn:hover {
+  background-color: #00b5e2;
+}
+
+/*BB FORM FIELDS FOR REG AND DONATION FLOW*/
+div.responsive input[type="text"], div.responsive input[type="number"], div.responsive input[type="password"], div.responsive select, .content .form-control, input[type="text"], input[type="number"], input[type="password"], select, select[multiple], select[size] {
+  height: 50px;
+  background-color: #f0f0f0;
+  color: #63666a;
+  padding: 0 10px;
+  font-size: 18px;
+  border: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+div.responsive select {
+  padding: 0 30px 0 10px;
+}
+
+div.responsive textarea {
+  height: 100px;
+  background-color: #f0f0f0;
+  color: #63666a;
+  padding: 0 10px;
+  font-size: 18px;
+  border: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+
+div.responsive label, #team_find_page label, .regSurvey label {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+#TeamRaiserQuickSearch {
+  line-height: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.selectWrap {
+  height: 50px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.selectArrow .fa {
+  font-size: 25px;
+  display: block;
+}
+
+#stateInputContainer .selectWrap {
+  display: inline;
+}
+
+#stateInputContainer .selectWrap .selectArrow {
+  display: none;
+}
+
+.combo-select-input-container .selectWrap {
+  display: inline;
+}
+
+div.responsive input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  vertical-align: top;
+  margin: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #888b8d;
+}
+
+:-moz-placeholder {
+  color: #888b8d;
+}
+
+::-moz-placeholder {
+  color: #888b8d;
+}
+
+:-ms-input-placeholder {
+  color: #888b8d;
+}
+
+#lLogonForm input {
+  margin: 20px 0;
+}
+
+/*ERROR MESSAGES*/
+div.responsive div.ErrorMessage.page-error > span.field-error-text, div.responsive div.ErrorMessage.page-error {
+  width: 100%;
+}
+
+div.responsive div.form-error {
+  overflow: hidden;
+}
+
+/*----------------------
+SURVEY
+------------------------*/
+form table tr.old-school table tr {
+  margin: 0 0 20px;
+}
+
+@media (max-width: 1023px) {
+  .form-control {
+    -webkit-appearance: none;
+  }
+}
+/*---------------------------------
+BUTTONS
+------------------------------------*/
+a.btn, a.btn:visited, .btn, a.editBtn, a.editBtn:visited, input.btn, input.btnMini, input.btnSm, input.btnMed, input.btnLg {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+a.btn, a.btn:visited, .btn, #login-div-content input.uc-button, #login-div-content button, #login-div-content .ft button {
+  color: #fff;
+  border: 0 none;
+  background: #f1b434;
+  padding: 0 2.5%;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  font-family: TTRounds-Bold;
+  background-image: none;
+  filter: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-success:hover, a.btn:hover, .btn:hover, #login-div-content input.uc-button:hover, #login-div-content button:hover, #login-div-content .ft button:hover, a.btn:focus {
+  background: #00b5e2;
+  text-decoration: none;
+}
+
+.btn-success {
+  color: #fff;
+  border: 0 none;
+  background: #f1b434;
+  padding: 0 0;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  font-family: TTRounds-Bold;
+  background-image: none;
+  filter: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  width: 60px;
+}
+
+a.customBtn, .customBtn, div.responsive a.customBtn, div.responsive .customBtn {
+  position: relative;
+  border: 5px solid #f1b434;
+  border-bottom: 0 none;
+  color: #63666a;
+  line-height: 60px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: TTRounds-Bold;
+  font-size: 20px;
+}
+a.customBtn .borderWrap, .customBtn .borderWrap, div.responsive a.customBtn .borderWrap, div.responsive .customBtn .borderWrap {
+  width: 85%;
+}
+
+a.customBtn:hover, .customBtn:hover, div.responsive a.customBtn:hover, div.responsive .customBtn:hover {
+  color: #485cc7;
+  border-color: #485cc7;
+  text-decoration: none;
+}
+a.customBtn:hover .borderOutline, .customBtn:hover .borderOutline, div.responsive a.customBtn:hover .borderOutline, div.responsive .customBtn:hover .borderOutline {
+  border-color: #485cc7;
+}
+a.customBtn:hover .borderOutline .borderLeft, .customBtn:hover .borderOutline .borderLeft, div.responsive a.customBtn:hover .borderOutline .borderLeft, div.responsive .customBtn:hover .borderOutline .borderLeft {
+  border-color: #485cc7;
+}
+
+/*Search input BTNS*/
+.btn.search, #qf_go {
+  background: url("../../../images/content/teamRaiser/searchIcon-white.png") no-repeat scroll center center #485cc7;
+  background-size: 30px;
+  width: 60px;
+  height: 50px;
+  border: 0 none;
+  filter: none;
+  text-indent: -99999px;
+}
+
+.btn.search:hover, #qf_go:hover {
+  background-position: center center;
+  background-color: #00b5e2;
+}
+
+/*BLACKBAUD SYSTEM BUTTONS*/
+#logBtn, #logBtn:link, #login, input#donor_matching_employersearchBtn, div.responsive a.step-button, div.responsive button.step-button, div.responsive a#previous_step.step-button, div.responsive button#previous_step.step-button, div.responsive a#cancel_button.step-button, div.responsive button#cancel_button.step-button, div.responsive button#pstep_cancel.step-button, .Button, div#team_find_search_results_container div.list-component-cell-column-join-link a, div.responsive a#part_ctr_container, div.responsive a#part_ctr_container_step, .NextButton, .FinishButton, .CancelButton, #login-div-content input.uc-button, #login-div-content button, #login-div-content .ft button, .SmallButton, #personal_page_team_page_link, .utype div.responsive .step-button.next-step {
+  color: #fff;
+  border: 0 none;
+  background: #f1b434;
+  padding: 0 2.5%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-family: TTRounds-Bold;
+  background-image: none;
+  filter: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  text-decoration: none;
+  min-width: 100px;
+}
+
+#logBtn:hover, #login:hover, input#donor_matching_employersearchBtn:hover, div.responsive a.step-button:hover, div.responsive button.step-button:hover, div.responsive a#previous_step.step-button:hover, div.responsive button#previous_step.step-button:hover, div.responsive a#cancel_button.step-button:hover, div.responsive button#cancel_button.step-button:hover, div.responsive button#pstep_cancel.step-button:hover, .Button:hover, div#team_find_search_results_container div.list-component-cell-column-join-link a:hover, div.responsive a#part_ctr_container:hover, div.responsive a#part_ctr_container_step:hover, .NextButton:hover, .FinishButton:hover, .CancelButton:hover, #login-div-content input.uc-button:hover, #login-div-content button:hover, #login-div-content .ft button:hover, .SmallButton:hover, #personal_page_team_page_link:hover, .utype div.responsive .step-button.next-step:hover {
+  background: none #00b5e2;
+  text-decoration: none;
+  filter: none;
+  color: #fff;
+}
+
+button span {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+div.responsive button.step-button {
+  max-width: 100%;
+}
+
+div#user_type_login_login_container #user_type_login_login_button {
+  margin-top: 20px;
+}
+
+.navbar-form #login {
+  line-height: 35px;
+  width: 60px;
+  padding: 0;
+  min-width: 0;
+}
+
+div.responsive input {
+  font-size: 18px;
+}
+
+/*INPUT BUTTONS*/
+.btn[type="button"], .btn[type="submit"] {
+  -webkit-appearance: none;
+}
+
+div.responsive a.secondary-step, div.responsive button.secondary-step {
+  margin: 20px 0 0;
+}
+
+@media (max-width: 767px) {
+  div.responsive a.next-step, div.responsive button.next-step, div.responsive button.finish-step, div.responsive button.step-button {
+    display: block;
+    margin: 0 auto 25px;
+    max-width: 350px;
+    width: 100%;
+    float: none;
+  }
+}
+/*-----------------------------------
+CUSTOM BORDER
+------------------------------------*/
+.borderWrap {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  width: 90%;
+  right: 0;
+}
+
+.borderOutline {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  border-bottom: 5px solid #f1b434;
+  background: transparent;
+}
+.borderOutline .borderLeft {
+  border-left: 5px solid #f1b434;
+  height: 15px;
+}
+
+.headlineBorder {
+  position: relative;
+  display: inline-block;
+}
+.headlineBorder .borderWrap {
+  width: 103%;
+}
+
+@media (max-width: 767px) {
+  .headlineBorder h2 {
+    width: 97%;
+  }
+  .headlineBorder .borderWrap {
+    width: 100%;
+  }
+}
+/*------------------------------------
+THERMOMTER
+-------------------------------------*/
+.entry .thermWrap {
+  background: #485cc7;
+  padding: 35px 0;
+}
+.entry .thermWrap .overlay .percent {
+  color: #fff;
+}
+
+.progressRadial {
+  float: left;
+  position: relative;
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+}
+
+.progressRadial .overlay {
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 40px;
+  left: 40px;
+}
+
+.radialWrap {
+  width: 275px;
+}
+
+.thermInfo {
+  text-align: center;
+  width: 72%;
+  width: calc(100% - 375px);
+}
+
+.thermInfo h1 {
+  line-height: 1.25;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.thermInfo h1:last-child {
+  margin-bottom: 0;
+}
+
+.thermInfo h1 strong {
+  font-family: TTRounds-Bold;
+}
+
+.overlay .percent {
+  font-size: 65px;
+  line-height: 185px;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .thermInfo {
+    width: calc(100% - 300px);
+  }
+  .thermInfo h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .entry .thermWrap .radialWrap, .entry .thermWrap .thermInfo {
+    float: none;
+    clear: both;
+  }
+
+  .entry .thermWrap .thermInfo {
+    width: 100%;
+  }
+
+  .entry .thermWrap .radialWrap {
+    margin: 0 auto 35px;
+    overflow: hidden;
+  }
+}
+/*-----------------------------------
+TAGLINES - PURPLE HEADLINE SECTIONS
+-------------------------------------*/
+.tagline {
+  background-color: #485cc7;
+}
+.tagline span {
+  padding: 40px 0;
+  color: #fff;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  font-family: TTRounds-Bold;
+}
+.tagline a, .tagline a:link, .tagline a:visited {
+  color: #fff;
+  font-size: inherit;
+  font-family: TTRounds-Bold;
+}
+.tagline img {
+  margin: -17px 0 0 5px;
+}
+.tagline h2 {
+  margin: 0;
+  padding: 25px 0;
+  color: #fff;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  font-family: TTRounds-Bold;
+}
