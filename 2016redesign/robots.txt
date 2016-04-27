@@ -1,6 +1,0 @@
-# $Header: /home/cvs/cvsroot/site_data/001/00000001/static_data/robots.txt,v 1.4 2001/09/13 00:25:08 dave Exp $
-User-agent: *
-Disallow: /site/Calendar
-Disallow: /site/TellAFriend
-Disallow: /site/TRGiftForm*
-Disallow: /site/TR?pg=informational&fr_id=22182&type=fr_informational&sid=3390
